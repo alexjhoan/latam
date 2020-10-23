@@ -80,7 +80,7 @@ export default function NavBar() {
 				align={"middle"}
 				justify={"center"}
 				>
-				<Col xs={24}>
+				<Col xs={24} style={{flex: "0 0 100%"}}>
 				{!screen.lg ? (
 					<Dropdown overlay={menu} trigger={['click']} className="dropDownNavBar">
 				    <a className="ant-dropdown-link dropDownLink" onClick={e => e.preventDefault()}>

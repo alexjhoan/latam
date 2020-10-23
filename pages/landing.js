@@ -10,8 +10,7 @@ import { useGoogleAnalytics } from "../shared-components/GlobalHooks/web/GoogleA
 import { useGoogleTagManager } from "../shared-components/GlobalHooks/web/GoogleTagManager.hook";
 import { useOneSignal } from "../shared-components/GlobalHooks/web/OneSignal.hook";
 import Header from "../shared-components/ViewFragments/Header/web";
-import NavBar from "../components/NavBar"
-import Banner from "../components/Banner"
+import LandingComponent from "../components/LandingComponent"
 
 // Home Page
 const Home = () => {
@@ -42,8 +41,7 @@ const Home = () => {
 			{/* Meta Tags */}
 			<MetaTags />
 			<Header />
-			<NavBar />
-			<Banner />
+			<LandingComponent />
 		</React.Fragment>
 	);
 };

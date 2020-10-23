@@ -1,13 +1,10 @@
 import React from 'react'
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 import {Row, Col, Typography, Divider, Statistic} from "antd";
-import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
-
 
 export default function Banner() {
 	const { theme } = useTheme();
 	const { Title, Text } = Typography;
-	const screen = useBreakpoint();
 	const { Countdown } = Statistic;
 	const deadline = Date.parse("11/04/2020");
 
@@ -18,7 +15,7 @@ export default function Banner() {
 	return (
 		<React.Fragment>
 			<Row className="BannerLanding">
-				<Col xs={24} className="BannerContainer">
+				<Col xs={24} className="containerLanding">
 					<Row className="InfBanner">
 						<Col xs={24} md={12} className="imgContainer">
 	      			<img src="/images/latam.png" alt="." />
@@ -70,7 +67,7 @@ export default function Banner() {
 								<div className="imgGrafic">
 		      				<img src="/images/icons/HourGlass.png" alt="." />
 								</div>
-							{/* TODO: buscar la grafica del banner */}
+								{/* TODO: buscar la grafica del banner */}
 								<div className="textGrafic">
 									<p className="titleCounter">¿De dónde nos visitan?</p>
 									<div className="sumaryGrafic innerText">
@@ -91,11 +88,6 @@ export default function Banner() {
 					background-repeat: no-repeat;
 			    background-size: cover;
 			    background-position: top center;
-				}
-				.BannerLanding .BannerContainer{
-					max-width: 90%;
-					margin: 0 auto;
-					padding: 5vh 15px;
 				}
 				.BannerLanding .InfBanner .imgContainer, .BannerLanding .imgGrafic {
 					display: flex;
@@ -222,12 +214,10 @@ export default function Banner() {
 					}
 					.CountersLanding .innerText {
 						font-size: 2vw;
+						line-height: 2vw;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
-					.BannerLanding .BannerContainer{
-						max-width: 80%;
-					}
 					.CountersLanding .CounterDivider{
 						border-left: solid 1px #0000000f;
 						border-right: solid 1px #0000000f;
@@ -254,6 +244,7 @@ export default function Banner() {
 					}
 					.CountersLanding .innerText {
 						font-size: 1vw;
+						line-height: 1.2vw;
 					}
 				}
 			`}</style>			
