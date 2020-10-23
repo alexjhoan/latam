@@ -34,7 +34,7 @@ export default function Banner() {
 	      				<img src="/images/icons/HourGlass.png" alt="." />
 							</div>
 							<div className="timeCounter">
-								<p>Tiempo para comprar con descuentos:</p>
+								<p className="titleCounter">Tiempo para comprar con descuentos:</p>
 								<Countdown value={deadline} onFinish={onFinish} format="D : HH : mm : ss"/>
 								<div className="textCounter">
 									<span>días</span>
@@ -46,24 +46,34 @@ export default function Banner() {
 						</Col>
 	    			<Divider type={"horizontal"} className="lgHidden"/>
 						<Col xs={24} lg={8} className="CounterDivider">
-							<p>¿Qué está pasando en la sala?</p>
+							<p className="titleCounter">¿Qué está pasando en la sala?</p>
 							<div className="visitorCounter">
-								<div className="itemVisitorCounter">
-									<Text>XXXX</Text>
-									<Text>inversores nos han visitado en las últimas 6 horas</Text>
+								<div className="innerText">
+									<div className="imgInner">
+			      				<img src="/images/icons/fire.png" alt="." />
+									</div>
+									<p className="titleCounter">XXXX</p>
+									<span>inversores nos han visitado en las últimas 6 horas</span>
 								</div>
-								<div className="itemVisitorCounter">
-									<Text>XXXX</Text>
-									<Text>están consultando ahora</Text>
+								<div className="innerText">
+									<div className="imgInner">
+			      				<img src="/images/icons/comment.png" alt="." />
+									</div>
+									<p className="titleCounter">XXXX</p>
+									<span>están consultando ahora</span>
 								</div>
 							</div>
 						</Col>
 	    			<Divider type={"horizontal"} className="lgHidden"/>
 						<Col xs={24} lg={8}>
 							<div className="graficCounter">
+								<div className="imgGrafic">
+		      				<img src="/images/icons/HourGlass.png" alt="." />
+								</div>
+							{/* TODO: buscar la grafica del banner */}
 								<div className="textGrafic">
-									<text>¿De dónde nos visitan?</text>
-									<div className="sumaryGrafic">
+									<p className="titleCounter">¿De dónde nos visitan?</p>
+									<div className="sumaryGrafic innerText">
 										<span>Argentina</span>
 										<span>Paraguay</span>
 										<span>Uruguay</span>
@@ -87,7 +97,7 @@ export default function Banner() {
 					margin: 0 auto;
 					padding: 5vh 15px;
 				}
-				.BannerLanding .InfBanner .imgContainer {
+				.BannerLanding .InfBanner .imgContainer, .BannerLanding .imgGrafic {
 					display: flex;
 			    flex-direction: row;
 			    justify-content: center;
@@ -129,7 +139,7 @@ export default function Banner() {
 			    width: 10vw;
 			    margin-right: 2vw;
 				}
-				.CountersLanding .timeCounter p {
+				.CountersLanding p.titleCounter {
 			    margin: 0;
 			    font-weight: 900;
 			    font-size: 3.3vw;
@@ -145,6 +155,37 @@ export default function Banner() {
 			    justify-content: space-between;
 			    font-size: 2.5vw;
 			    padding-left: 6vw;
+				}
+				.CountersLanding .innerText {
+					font-size: 2.5vw;
+				}
+				.CountersLanding .visitorCounter, .CountersLanding .sumaryGrafic {
+			    display: grid;
+			    grid-template-columns: 1fr 1fr;
+			    grid-column-gap: 10px;
+			    margin-top: 10px;
+				}
+				.CountersLanding .graficCounter {
+			    display: grid;
+			    grid-template-columns: 35% 65%;
+				}
+				.CountersLanding .graficCounter img{
+					width: 100%;
+					max-width: 70px;
+					height: auto;					
+				}
+				.CountersLanding .innerText {
+			    padding-left: 15px;
+			    position: relative;
+				}
+				.CountersLanding .imgInner {
+			    position: absolute;
+			    left: -7px;
+			    top: -1px;
+				}
+				.CountersLanding .imgInner img {
+			    height: 20px;
+			    width: auto;
 				}
 
 				@media (min-width: ${theme.breakPoints.sm}){
@@ -167,7 +208,7 @@ export default function Banner() {
 				    margin-right: 15px;
 				    max-width: 70px;
 					}
-					.CountersLanding .timeCounter p {
+					.CountersLanding p.titleCounter {
 				    font-size: 2.5vw;
 					}
 					.CountersLanding span.ant-statistic-content-value {
@@ -179,6 +220,9 @@ export default function Banner() {
     				padding-left: 7vw;
     				padding-right: 1vw;
 					}
+					.CountersLanding .innerText {
+						font-size: 2vw;
+					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.BannerLanding .BannerContainer{
@@ -187,6 +231,7 @@ export default function Banner() {
 					.CountersLanding .CounterDivider{
 						border-left: solid 1px #0000000f;
 						border-right: solid 1px #0000000f;
+						padding: 0 1vw;
 					}
 					.lgHidden{
 						display: none;
@@ -196,7 +241,7 @@ export default function Banner() {
 				    margin-right: 7px;
 				    max-width: 70px;
 					}
-					.CountersLanding .timeCounter p {
+					.CountersLanding p.titleCounter {
 				    font-size: 1.1vw;
 					}
 					.CountersLanding span.ant-statistic-content-value {
@@ -206,6 +251,9 @@ export default function Banner() {
 					.CountersLanding .textCounter {
 				    font-size: 1vw;
     				padding-left: 2vw;
+					}
+					.CountersLanding .innerText {
+						font-size: 1vw;
 					}
 				}
 			`}</style>			
