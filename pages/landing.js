@@ -11,6 +11,7 @@ import { useGoogleTagManager } from "../shared-components/GlobalHooks/web/Google
 import { useOneSignal } from "../shared-components/GlobalHooks/web/OneSignal.hook";
 import Header from "../shared-components/ViewFragments/Header/web";
 import NavBar from "../components/NavBar"
+import Banner from "../components/Banner"
 
 // Home Page
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
 			<MetaTags />
 			<Header />
 			<NavBar />
+			<Banner />
 		</React.Fragment>
 	);
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { useTheme } from "../shared-components/Styles/ThemeHook";
-import Icon from "../shared-components/Components/Icon/web";
-
+import { DownOutlined } from '@ant-design/icons';
 
 // ant design components
 import {Row, Col, Menu, Dropdown, Affix, Divider} from "antd";
@@ -22,7 +21,7 @@ export default function NavBar() {
 	    <Menu.Item key="0">
 	      <a href="/#" onClick={clickFalse} className="navLink">
 	      	<div className="imgContainer">
-	      		<img src="/images/icons/OpenDay.png" alt="OpenDay" />	      		
+	      		<img src="/images/icons/OpenDay.png" alt="." />
 	      	</div>	
 	      	Open Day Virtual
 	      </a>
@@ -31,7 +30,7 @@ export default function NavBar() {
 	    <Menu.Item key="1">
 	      <a href="/#" onClick={clickFalse} className="navLink">
 	      	<div className="imgContainer">
-	      		<img src="/images/icons/Charlas.png" alt="OpenDay" />	      		
+	      		<img src="/images/icons/Charlas.png" alt="." />
 	      	</div>	
 	      	Charlas
 	      </a>
@@ -40,7 +39,7 @@ export default function NavBar() {
 	    <Menu.Item key="2">
 	    	<a href="/#" onClick={clickFalse} className="navLink">
 	    		<div className="imgContainer">
-	      		<img src="/images/icons/OpenDay.png" alt="OpenDay" />	    			
+	      		<img src="/images/icons/OpenDay.png" alt="." />
 	    		</div>	
 	      	Sala en Vivo
 	      </a>
@@ -49,7 +48,7 @@ export default function NavBar() {
 	    <Menu.Item key="3">
 	    	<a href="/#" onClick={clickFalse} className="navLink">
 	    		<div className="imgContainer">
-	      		<img src="/images/icons/Propiedades.png" alt="OpenDay" />	    			
+	      		<img src="/images/icons/Propiedades.png" alt="." />
 	    		</div>	
 	      	Propiedades
 	      </a>
@@ -58,7 +57,7 @@ export default function NavBar() {
 	    <Menu.Item key="4">
 	    	<a href="/#" onClick={clickFalse} className="navLink">
 	    		<div className="imgContainer">
-	      		<img src="/images/icons/Directorio.png" alt="OpenDay" />	    			
+	      		<img src="/images/icons/Directorio.png" alt="." />
 	    		</div>	
 	      	Directorio
 	      </a>
@@ -67,7 +66,7 @@ export default function NavBar() {
 	    <Menu.Item key="5">
 	    	<a href="/#" onClick={clickFalse} className="navLink">
 	    		<div className="imgContainer">
-	      		<img src="/images/icons/BigData.png" alt="OpenDay" />	    			
+	      		<img src="/images/icons/BigData.png" alt="." />
 	    		</div>	
 	      	Big Data
 	      </a>
@@ -84,8 +83,8 @@ export default function NavBar() {
 				<Col xs={24}>
 				{!screen.lg ? (
 					<Dropdown overlay={menu} trigger={['click']} className="dropDownNavBar">
-				    <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-				      ¡Hola! ¿Qué estás buscando?
+				    <a className="ant-dropdown-link dropDownLink" onClick={e => e.preventDefault()}>
+				      ¡Hola! ¿Qué estás buscando? <DownOutlined />
 				    </a>
 				  </Dropdown>
 				  ): menu}
@@ -99,6 +98,11 @@ export default function NavBar() {
 					justify-content: center;
 					height: 64px;
   				border-right: none;
+  				background: #fff;
+				}
+				.navBarLanding .navBar {
+					border-top: solid 1px #0000000f;
+    			box-shadow: 0px 0px 15px #0000009f;
 				}
 				.navBarLanding .dropDownNavBar, .ant-dropdown-menu-item, .ant-dropdown-menu-item .navLink {
 					display: flex;
@@ -132,13 +136,30 @@ export default function NavBar() {
 				.ant-dropdown-menu-item .navLink .imgContainer {
 				  width: 50px;
 				}
-				.ant-dropdown-link {
+				.dropDownLink, .dropDownLink:hover, .dropDownLink:active, .dropDownLink:focus {
 					height: 64px;
     			border-bottom: solid 2px ${theme.colors.primaryColor};
-    			font-size: 1.2rem;
+    			font-size: 1.1rem;
     			font-weight: 700;
-    			border-top: solid 1px ${theme.colors.borderColor};
-    			color: ${theme.colors.textColor}
+    			border-top: solid 1px #3A4145;
+    			color: ${theme.colors.textColor};
+    			transition: 0.3s ease-in-out;
+    			background: #fff;
+				}
+				.dropDownLink.ant-dropdown-open {
+					color: ${theme.colors.primaryColor};
+    			transition: 0.3s ease-in-out;
+				}
+				.dropDownLink span{
+    			color: ${theme.colors.textColor};
+					font-size: 18px!important;
+    			margin-left: 10px;
+    			transition: 0.3s ease-in-out;
+				}
+				.dropDownLink.ant-dropdown-open span{
+					color: ${theme.colors.primaryColor};
+					transform: rotate(180deg);
+    			transition: 0.3s ease-in-out;
 				}
 			`}</style>
 		</Affix>
