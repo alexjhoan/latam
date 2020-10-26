@@ -12,15 +12,17 @@ export default function OpenDay() {
 		    <img src="/images/icons/lineRight.png" alt="." className="dNone lineRight"/>
 				<Col xs={24} className="containerLanding OpenDayContainer">
 					<div className="dColumnCenter textCenter title">
-						{/*TODO: faltan las imagenes de Open Day*/}
-	      		<img src="/images/latam.png" alt="." />
+	      		<img src="/images/openDay.png" alt="." />
 		      	<p>Mirá el video y conocé 4 proyectos con promociones exclusivas <br className="dLgNone"/>¡especial para inversores!</p>
 					</div>
 					<div className="viewVideo">
-						{/*TODO: faltan las imagenes de las flechas*/}
-						<p className="dNone dLgBlock">Una hora de ofertas imperdibles</p>
+						<div className="titleVideo dRowCenter dNone dLgFlex">
+			    		<img src="/images/icons/arrowRight.png" alt="." />
+							<p>Una hora de ofertas imperdibles</p>
+			    		<img src="/images/icons/arrowLeft.png" alt="." />
+						</div>
 						<div className="theVideo">
-							<iframe width="1090" height="613" src="https://www.youtube.com/embed/87gWaABqGYs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="1090" height="613" src="https://www.youtube.com/embed/3Qp3kSpKrpM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 		      	<div className="footerVideo dNone dLgFlex dRowCenter">
 		      		<img src="/images/footerVideo.png" alt="." />
@@ -63,6 +65,8 @@ export default function OpenDay() {
 				}
 				.OpenDayLanding .title img{
 					max-width: 50%;
+					transform: translateX(-15px);
+    			margin-bottom: 3vh;
 				}
 				.OpenDayLanding .theVideo{
 					padding-top: 56.26%;
@@ -184,6 +188,15 @@ export default function OpenDay() {
 					}
 					.OpenDayLanding .btnContact .ant-btn span {
 						font-size: 16px;
+					}
+					.OpenDayLanding .titleVideo img {
+					  width: auto;
+					  height: 32px;
+					}
+					.OpenDayLanding .titleVideo p {
+					  font-size: 26px;
+					  margin: 1vh 20px;
+					  text-align: center;
 					}
 				}				
 			`}</style>

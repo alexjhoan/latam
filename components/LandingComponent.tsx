@@ -3,6 +3,9 @@ import { useTheme } from "../shared-components/Styles/ThemeHook";
 import NavBar from "./NavBar"
 import Banner from "./Banner"
 import OpenDay from "./OpenDay"
+import Talks from "./Talks"
+import Sponsor from "./Sponsor"
+import Properties from "./Properties"
 
 export default function LandingComponent() {
 	const { theme } = useTheme();
@@ -11,6 +14,8 @@ export default function LandingComponent() {
 			<NavBar />
 			<Banner />
 			<OpenDay />
+			<Talks />
+			<Sponsor />
 			<style jsx global>{`
 				.containerLanding{
 					width: 90%;
