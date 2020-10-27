@@ -142,7 +142,7 @@ export default function Banner() {
 					background-position: top center;
 				}
 				.BannerLanding .InfBanner {
-					margin: 10vh 0;
+					margin: -50px 0 10vh;
 				}
 				.BannerLanding .InfBanner .imgContainer,
 				.BannerLanding .imgGrafic {

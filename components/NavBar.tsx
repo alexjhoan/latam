@@ -19,7 +19,7 @@ export default function NavBar() {
 	const menu = (
 	  <Menu className="navBar">
 	    <Menu.Item key="0">
-	      <a href="/#" onClick={clickFalse} className="navLink">
+	      <a href="#openday" className="navLink">
 	      	<div className="imgContainer">
 	      		<img src="/images/icons/OpenDay.png" alt="." />
 	      	</div>	
@@ -28,7 +28,7 @@ export default function NavBar() {
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
 	    <Menu.Item key="1">
-	      <a href="/#" onClick={clickFalse} className="navLink">
+	      <a href="#talks" className="navLink">
 	      	<div className="imgContainer">
 	      		<img src="/images/icons/Charlas.png" alt="." />
 	      	</div>	
@@ -55,7 +55,7 @@ export default function NavBar() {
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
 	    <Menu.Item key="4">
-	    	<a href="/#" onClick={clickFalse} className="navLink">
+	    	<a href="#sponsor" className="navLink">
 	    		<div className="imgContainer">
 	      		<img src="/images/icons/Directorio.png" alt="." />
 	    		</div>	
@@ -64,7 +64,7 @@ export default function NavBar() {
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
 	    <Menu.Item key="5">
-	    	<a href="/#" onClick={clickFalse} className="navLink">
+	    	<a href="#bigdata" className="navLink">
 	    		<div className="imgContainer">
 	      		<img src="/images/icons/BigData.png" alt="." />
 	    		</div>	

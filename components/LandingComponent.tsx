@@ -4,8 +4,10 @@ import NavBar from "./NavBar"
 import Banner from "./Banner"
 import OpenDay from "./OpenDay"
 import Talks from "./Talks"
-import Sponsor from "./Sponsor"
 import Properties from "./Properties"
+import Sponsor from "./Sponsor"
+import BigData from "./BigData"
+import Footer from "./Footer"
 
 export default function LandingComponent() {
 	const { theme } = useTheme();
@@ -16,13 +18,18 @@ export default function LandingComponent() {
 			<OpenDay />
 			<Talks />
 			<Sponsor />
+			<BigData />
+			<Footer />
 			<style jsx global>{`
+				html{
+					scroll-behavior: smooth;
+				}
 				.containerLanding{
 					width: 90%;
 					flex: 0 0 90%;
 					max-width: 1400px;
 			    margin: 0 auto;
-			    padding: 5vh 15px;
+			    padding: 128px 15px 5vh;
 				}
 				.dRowCenter{
 					display: flex;

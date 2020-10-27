@@ -7,7 +7,7 @@ export default function OpenDay() {
 
 	return (
 		<React.Fragment>
-			<Row className="OpenDayLanding">
+			<Row id="openday" className="OpenDayLanding">
 		    <img src="/images/icons/lineLeft.png" alt="." className="dNone lineLeft"/>
 		    <img src="/images/icons/lineRight.png" alt="." className="dNone lineRight"/>
 				<Col xs={24} className="containerLanding OpenDayContainer">
@@ -22,7 +22,7 @@ export default function OpenDay() {
 			    		<img src="/images/icons/arrowLeft.png" alt="." />
 						</div>
 						<div className="theVideo">
-							<iframe width="1090" height="613" src="https://www.youtube.com/embed/3Qp3kSpKrpM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="1090" height="613" src="https://www.youtube.com/embed/3Qp3kSpKrpM"></iframe>
 						</div>
 		      	<div className="footerVideo dNone dLgFlex dRowCenter">
 		      		<img src="/images/footerVideo.png" alt="." />
@@ -62,10 +62,10 @@ export default function OpenDay() {
 				.OpenDayContainer {
 			    display: grid;
 			    grid-template-columns: 1fr;
+			    padding-bottom: 80px!important;
 				}
 				.OpenDayLanding .title img{
 					max-width: 50%;
-					transform: translateX(-15px);
     			margin-bottom: 3vh;
 				}
 				.OpenDayLanding .theVideo{
@@ -120,13 +120,10 @@ export default function OpenDay() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
-					.OpenDayLanding {
-    				padding: 8vh 0;
-					}
 					.OpenDayLanding .lineLeft{
 						display: block;
 						position: absolute;
-						top: 30px;
+						top: 70px;
 						left: 0;
 						width: 20%;
 					}
@@ -145,6 +142,9 @@ export default function OpenDay() {
 				    display: grid;
 				    grid-template-columns: 1fr 1fr;
 				    grid-column-gap: 30px;				    
+					}
+					.OpenDayLanding .title img{
+						transform: translateX(-15px);
 					}
 					.OpenDayContainer .title {
 						grid-column-start: 1;

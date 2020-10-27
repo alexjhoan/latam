@@ -59,7 +59,7 @@ export default function Talks() {
         slidesPerView: 2,
         spaceBetween: 20
       },
-      320: {
+      0: {
         slidesPerView: 1,
         spaceBetween: 10
       }
@@ -68,7 +68,7 @@ export default function Talks() {
 
 	return (
 		<React.Fragment>
-			<Row className="TalksLanding">
+			<Row id="talks" className="TalksLanding">
 				<Col xs={24} className="containerLanding">
 					<h1 className="titleTalks">{t('Charlas y presentaciones de proyectos')}</h1>
 					<Swiper {...paramsSwiper}>
@@ -78,11 +78,11 @@ export default function Talks() {
 			</Row>
 			<style jsx global>{`
 				.TalksLanding .titleTalks {
-						font-size: 4vw;
-						text-align: center;
-						margin-bottom: 3vh;
-    				font-weight: 900;
-					}
+					font-size: 4vw;
+					text-align: center;
+					margin-bottom: 3vh;
+  				font-weight: 900;
+				}
 				.TalksLanding .itemVideo{
 					padding-top: 56.26%;
 					position: relative;
