@@ -9,7 +9,7 @@ export default function Footer() {
 			<style jsx global>{`
 				.footer {
 					background: #3A4145;
-					paddin: 4vh 0;
+					padding: 4vh 0;
 				}
 				.footer img{
 					width: auto;
