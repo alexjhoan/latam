@@ -16,6 +16,7 @@ export default function LandingComponent() {
 			<NavBar />
 			<Banner />
 			<OpenDay />
+			<Properties />
 			<Talks />
 			<Sponsor />
 			<BigData />
@@ -24,12 +25,15 @@ export default function LandingComponent() {
 				html{
 					scroll-behavior: smooth;
 				}
+				#openday, #properties, #talks, #sponsor, #bigdata {
+					margin-top: -100px;
+				}
 				.containerLanding{
 					width: 90%;
 					flex: 0 0 90%;
 					max-width: 1400px;
-			    margin: 0 auto;
-			    padding: 128px 15px 5vh;
+			    margin: 128px auto 0;
+			    padding: 5vh 15px;
 				}
 				.dRowCenter{
 					display: flex;
@@ -78,10 +82,6 @@ export default function LandingComponent() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
-					.containerLandin{
-						width: 80%;
-						flex: 0 0 80%;
-					}
 					.dLgNone{
 						display: none;
 					}
@@ -90,6 +90,12 @@ export default function LandingComponent() {
 					}
 					.dLgFlex{
 						display: flex;
+					}
+				}
+				@media (min-width: ${theme.breakPoints.xxl}){
+					.containerLanding{
+						width: 80%;
+						flex: 0 0 80%;
 					}
 				}
 			`}</style>

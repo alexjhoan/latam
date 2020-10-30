@@ -12,10 +12,6 @@ export default function NavBar() {
 	const { Title, Text } = Typography;
 	const screen = useBreakpoint();
 
-	const clickFalse = (e) => {
-		e.preventDefault()
-	}
-
 	const menu = (
 	  <Menu className="navBar">
 	    <Menu.Item key="0">
@@ -28,6 +24,15 @@ export default function NavBar() {
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
 	    <Menu.Item key="1">
+	    	<a href="#properties" className="navLink">
+	    		<div className="imgContainer">
+	      		<img src="/images/icons/Propiedades.png" alt="." />
+	    		</div>	
+	      	Propiedades
+	      </a>
+	    </Menu.Item>
+	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
+	    <Menu.Item key="2">
 	      <a href="#talks" className="navLink">
 	      	<div className="imgContainer">
 	      		<img src="/images/icons/Charlas.png" alt="." />
@@ -36,25 +41,7 @@ export default function NavBar() {
 	      </a>
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
-	    <Menu.Item key="2">
-	    	<a href="/#" onClick={clickFalse} className="navLink">
-	    		<div className="imgContainer">
-	      		<img src="/images/icons/OpenDay.png" alt="." />
-	    		</div>	
-	      	Sala en Vivo
-	      </a>
-	    </Menu.Item>
-	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
 	    <Menu.Item key="3">
-	    	<a href="/#" onClick={clickFalse} className="navLink">
-	    		<div className="imgContainer">
-	      		<img src="/images/icons/Propiedades.png" alt="." />
-	    		</div>	
-	      	Propiedades
-	      </a>
-	    </Menu.Item>
-	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
-	    <Menu.Item key="4">
 	    	<a href="#sponsor" className="navLink">
 	    		<div className="imgContainer">
 	      		<img src="/images/icons/Directorio.png" alt="." />
@@ -63,7 +50,7 @@ export default function NavBar() {
 	      </a>
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
-	    <Menu.Item key="5">
+	    <Menu.Item key="4">
 	    	<a href="#bigdata" className="navLink">
 	    		<div className="imgContainer">
 	      		<img src="/images/icons/BigData.png" alt="." />
@@ -123,6 +110,8 @@ export default function NavBar() {
 				}
 				.ant-dropdown-menu{
 					padding: 15px 0;
+					margin-top: -4px;
+    			border-radius: 0;
 				}
 				.ant-dropdown .ant-divider-horizontal  {
 			    min-width: 90%;

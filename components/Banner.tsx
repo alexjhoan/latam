@@ -92,7 +92,7 @@ export default function Banner() {
 							</div>
 						</Col>
 						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8} className="CounterDivider">
+						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
 							<p className="titleCounter">¿Qué está pasando en la sala?</p>
 							<div className="visitorCounter">
 								<div className="innerText">
@@ -135,11 +135,16 @@ export default function Banner() {
 				</Col>
 			</Row>
 			<style jsx global>{`
+				.BannerLanding > .containerLanding {
+				  margin-bottom: 5vh;
+				}
 				.BannerLanding {
 					background-image: url(/images/header.jpg);
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: top center;
+					position: relative;
+    			z-index: 1;
 				}
 				.BannerLanding .InfBanner {
 					margin: -50px 0 10vh;
@@ -226,13 +231,13 @@ export default function Banner() {
 					height: auto;
 				}
 				.CountersLanding .innerText {
-					padding-left: 15px;
+					padding-left: 25px;
 					position: relative;
 				}
 				.CountersLanding .imgInner {
 					position: absolute;
-					left: -7px;
-					top: -1px;
+					left: 0px;
+					top: 1px;
 				}
 				.CountersLanding .imgInner img {
 					height: 20px;

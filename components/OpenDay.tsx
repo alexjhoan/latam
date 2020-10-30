@@ -13,7 +13,8 @@ export default function OpenDay() {
 				<Col xs={24} className="containerLanding OpenDayContainer">
 					<div className="dColumnCenter textCenter title">
 	      		<img src="/images/openDay.png" alt="." />
-		      	<p>Mirá el video y conocé 4 proyectos con promociones exclusivas <br className="dLgNone"/>¡especial para inversores!</p>
+		      	<p>Mirá el video y conocé los 7 lanzamientos exclusivos con precios especiales para inversores!</p>
+		      	<p className="secondParagraph">Congelá precio y condiciones por 7 días con una seña FLASH, que podés pagar online desde Argentina y cualquier parte del mundo!</p>
 					</div>
 					<div className="viewVideo">
 						<div className="titleVideo dRowCenter dNone dLgFlex">
@@ -51,6 +52,7 @@ export default function OpenDay() {
 				.OpenDayLanding{
 			    background: #3A4145;
     			position: relative;
+    			z-index: 0;
 				}
 				.OpenDayLanding p, .OpenDayLanding span{
 			    color: #fff;
@@ -62,11 +64,15 @@ export default function OpenDay() {
 				.OpenDayContainer {
 			    display: grid;
 			    grid-template-columns: 1fr;
-			    padding-bottom: 80px!important;
+			    padding-bottom: 10px!important;
 				}
 				.OpenDayLanding .title img{
 					max-width: 50%;
     			margin-bottom: 3vh;
+				}
+				.OpenDayLanding .secondParagraph{
+					font-weight: 400;
+					margin-top: 20px;
 				}
 				.OpenDayLanding .theVideo{
 					padding-top: 56.26%;
@@ -106,7 +112,6 @@ export default function OpenDay() {
 				}
 				.OpenDayLanding .btnContact .ant-btn img {
 			    height: 2.5vw;
-			    margin-right: 5px;
 			    transform: translateY(-2px);
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
@@ -118,12 +123,23 @@ export default function OpenDay() {
 						font-size: 2vw;
 						padding: 0 7px 15px;
 					}
+					.OpenDayLanding .btnContact .ant-btn img {
+				    height: 20px;
+					}
+				}
+				@media (min-width: ${theme.breakPoints.md}){
+					.OpenDayLanding .btnContact .ant-btn span{
+						font-size: 14px;
+					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
+					.OpenDayContainer {
+				    padding-bottom: 100px!important;
+					}
 					.OpenDayLanding .lineLeft{
 						display: block;
 						position: absolute;
-						top: 70px;
+						top: 120px;
 						left: 0;
 						width: 20%;
 					}
@@ -140,8 +156,8 @@ export default function OpenDay() {
 					}
 					.OpenDayContainer {
 				    display: grid;
-				    grid-template-columns: 1fr 1fr;
-				    grid-column-gap: 30px;				    
+				    grid-template-columns: 48% 48%;
+				    grid-column-gap: 4%;				    
 					}
 					.OpenDayLanding .title img{
 						transform: translateX(-15px);
@@ -172,7 +188,7 @@ export default function OpenDay() {
 					  height: 30px;
 					}
 					.OpenDayLanding .theVideo{
-	    			margin: 0;
+	    			margin: 15px 0;
 					}
 					.OpenDayLanding .footerVideo{
 						justify-content: flex-end;
@@ -183,12 +199,6 @@ export default function OpenDay() {
 					.OpenDayLanding .titleContact{
 						justify-content: flex-start;
 					}
-					.OpenDayLanding .btnContact .ant-btn img {
-					  height: 20px;
-					}
-					.OpenDayLanding .btnContact .ant-btn span {
-						font-size: 16px;
-					}
 					.OpenDayLanding .titleVideo img {
 					  width: auto;
 					  height: 32px;
@@ -198,7 +208,27 @@ export default function OpenDay() {
 					  margin: 1vh 20px;
 					  text-align: center;
 					}
-				}				
+				}
+				@media (min-width: ${theme.breakPoints.xl}){
+					.OpenDayContainer {
+				    display: grid;
+				    grid-template-columns: 44% 48%;
+				    grid-column-gap: 8%;				    
+					}
+					.OpenDayLanding .btnContact{
+						justify-content: flex-start;
+					}
+					.OpenDayLanding .btnContact .ant-btn:first-child {
+					  margin-right: 15px;
+					}
+					.OpenDayLanding .btnContact .ant-btn img {
+						height: 20px;
+					  margin-right: 5px;
+					}
+					OpenDayLanding .btnContact .ant-btn span {
+						font-size: 16px;
+					}
+				}
 			`}</style>
 		</React.Fragment>
 	)

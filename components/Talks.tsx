@@ -70,23 +70,37 @@ export default function Talks() {
 		<React.Fragment>
 			<Row id="talks" className="TalksLanding">
 				<Col xs={24} className="containerLanding">
-					<h1 className="titleTalks">{t('Charlas y presentaciones de proyectos')}</h1>
-					<Swiper {...paramsSwiper}>
-						{dataVideoImp}
-					</Swiper>
+					<div>
+						<h1 className="titleTalks">{t('Charlas y presentaciones de proyectos')}</h1>
+						<Swiper {...paramsSwiper}>
+							{dataVideoImp}
+						</Swiper>						
+					</div>
 				</Col>
 			</Row>
 			<style jsx global>{`
+				.TalksLanding .containerLanding {
+					background: #f1f1f1;
+					width: 100%;
+					flex: 0 0 100%;
+				}
+				.TalksLanding .containerLanding > div{
+					width: 90%;
+					flex: 0 0 90%;
+					margin: 0 auto;
+				}
 				.TalksLanding .titleTalks {
-					font-size: 4vw;
+					font-size: 18px;
 					text-align: center;
 					margin-bottom: 3vh;
   				font-weight: 900;
+  				line-height: 18px;
 				}
 				.TalksLanding .itemVideo{
 					padding-top: 56.26%;
 					position: relative;
 					width: 100%;
+					margin-bottom: 15px;
 				}
 				.TalksLanding .itemVideo iframe {
 					position: absolute;
@@ -126,9 +140,16 @@ export default function Talks() {
 				@media (min-width: ${theme.breakPoints.lg}){
 					.TalksLanding .titleTalks {
 						font-size: 28px;
+						padding: 3vh 0;
 						text-align: center;
 						margin-bottom: 5vh;
     				font-weight: 900;
+					}
+				}
+				@media (min-width: ${theme.breakPoints.xxl}){
+					.TalksLanding .containerLanding > div{
+						width: 80%;
+						flex: 0 0 80%;
 					}
 				}
 			`}</style>

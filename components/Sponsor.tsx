@@ -3,88 +3,31 @@ import {Row, Col, Pagination } from "antd";
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
-
-const participants = [
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Paraguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Paraguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Paraguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Paraguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Paraguay'
-	},
-	{
-		name: 'Nombre Empresa',
-		email: 'empresa@empresa.com',
-		tel: '+598 123 456',
-		ubication: 'Uruguay'
-	},
-]
+import {participants} from "./Sponsor.json"
 
 export default function Sponsor() {
 	const screen = useBreakpoint();
 	const { theme } = useTheme();
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = React.useState(1);
-	const totalPerPage = !screen.md ? 5 : 10;
+	const totalPerPage = !screen.lg ? 5 : 10;
 
 	const participantToShow = participants.slice((currentPage - 1) * totalPerPage, currentPage * totalPerPage);
 
-	const cardParticipants = participantToShow.map((item, i) => {
+	let data:any
+
+	if (!screen.lg) {
+		data = participantToShow
+	} else {
+		data = participants
+	}
+
+	const cardParticipants = data.map((item, i) => {
 		return(
-			<div className="card dRowCenter" key={i} >
+			<div className="card" key={i} >
+				<div className="logo">
+					<img src={`/images/logos/${item.name}.jpg`} alt="" />
+				</div>
 				<div>
 					<p className="name">{item.name}</p>
 					<p>{item.email}</p>
@@ -103,17 +46,22 @@ export default function Sponsor() {
 			<Row id="sponsor" className="SponsorLanding">
 				<Col xs={24} className="containerLanding">
 					<h1 className="title">{t("Directorio de Empresas Participantes")}</h1>
-					<div className="participants">
-					 {cardParticipants}
-					</div>
-					<Pagination current={currentPage} total={participants.length} pageSize={totalPerPage} onChange={(page,size)=>setCurrentPage(page)} className="dRowCenter" />
+						<div className="participants">
+						 {cardParticipants}
+						</div>
+						{
+							!screen.lg ? 
+							<Pagination current={currentPage} total={participants.length} pageSize={totalPerPage} onChange={(page,size)=>setCurrentPage(page)} className="dRowCenter" />
+							: null
+						}
 				</Col>
 			</Row>
 			<style jsx global>{`
 				.SponsorLanding h1.title {
 			    text-align: center;
 			    font-weight: 900;
-			    font-size: 4vw;
+			    font-size: 18px;
+			    line-height: 18px;
 				}
 				.SponsorLanding .participants {
 				  display: grid;
@@ -121,9 +69,19 @@ export default function Sponsor() {
 				  grid-gap: 30px 15px;
 				  margin: 7vh 0;
 				}
+				.SponsorLanding .card {
+				  display: grid;
+				  grid-template-columns: 30% 69%;
+				  grid-column-gap: 1%;
+				}
+				.SponsorLanding .card .logo img {
+					width:100%;
+					height auto;
+				}
 				.SponsorLanding .card p {
-				  font-size: 20px;
+				  font-size: 15px;
 				  margin-bottom: 0;
+    			word-break: break-word;
 				}
 				.SponsorLanding .card p.name {
 				  font-weight: 900;
@@ -131,14 +89,31 @@ export default function Sponsor() {
 				.SponsorLanding .card .ubication {
 				  justify-content: flex-start;
 				}
-				.SponsorLanding .card img {
+				.SponsorLanding .card .ubication img {
 				  width: auto;
 				  height: 25px;
 				  margin-right: 10px;
 				}
+				.SponsorLanding .ant-pagination-item, .SponsorLanding .ant-pagination-prev, .SponsorLanding .ant-pagination-next {
+					min-width: 25px;
+    			height: 25px;
+    			line-height: 25px;
+    			font-size: 12px;
+    			margin-right: 4px;
+				}
 				@media (min-width: ${theme.breakPoints.sm}){
+					.SponsorLanding .card p {
+					  font-size: 20px;
+					}
 					.SponsorLanding h1.title {
 						font-size: 3vw;
+					}
+					.SponsorLanding .ant-pagination-item, .SponsorLanding ant-pagination-prev, .SponsorLanding ant-pagination-next {
+						min-width: 40px;
+	    			height: 40px;
+	    			line-height: 38px;
+	    			font-size: 12px;
+	    			margin-right: 8px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){

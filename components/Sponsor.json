@@ -1,0 +1,202 @@
+{
+	"participants":[
+		{
+			"name": "Florencia",
+			"email": "info@male.com.py",
+			"tel": "+54 9 11 6202-7237",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "AVA",
+			"email": "info@avalacaleta.com",
+			"tel": "2601 5561",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Ventura",
+			"email": "info@ventura.com.uy",
+			"tel": "(+598) 99 202 424",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Malé",
+			"email": "",
+			"tel": "(+598) 96 207 460",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "M4",
+			"email": "galeriam4@m4.com.py",
+			"tel": "595 981 229900",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Fortaleza",
+			"email": "info@fortalezainmuebles.com",
+			"tel": "595 21 614 412",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Vitrium",
+			"email": "info@vitriumcapital.com",
+			"tel": "2708 3714",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Petrus",
+			"email": "",
+			"tel": "595 21 604 800",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Sures",
+			"email": "info@sures.com.uy",
+			"tel": "(+598) 2710 6570",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Cipia",
+			"email": "contacto@cipia.com.uy",
+			"tel": "(+598) 2915 09 99",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Bernardina BeOne",
+			"email": "info@beone.com.uy",
+			"tel": "",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "BDP",
+			"email": "info@bdp.com.uy",
+			"tel": "091 857 562",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Green Park",
+			"email": "greenpark@gruposolanas.com",
+			"tel": "2711 3800",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Altius",
+			"email": "info@altius.com.uy",
+			"tel": "(+598)08008911",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Green Park",
+			"email": "admgreenpark@gmail.com",
+			"tel": "(+595) 972 750161",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Kosak",
+			"email": "info@kosak.com.uy",
+			"tel": "(+598) 2707 1871",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Avanza",
+			"email": "ventas@avanza.com.py",
+			"tel": "595 991 830900",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Zuba",
+			"email": "zuba.inversiones@gmail.com",
+			"tel": "595 986 770000",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Fischer y Rubio SRL",
+			"email": "javier@estudiofischer.com",
+			"tel": "(+598) 2902 8738",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Eydisa",
+			"email": "contactos@eydisa.com.py",
+			"tel": "595 21 663 297",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Punto",
+			"email": "info@puntoinmobiliario.com.uy",
+			"tel": "2709 6771",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Miaterra",
+			"email": "comercial@miaterra.com",
+			"tel": "595 21 233 022",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "GAO",
+			"email": "info@gao.com.py",
+			"tel": "595 982 564271",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Be Parklife",
+			"email": "info@beproyectos.com",
+			"tel": "(+598) 97 400 333",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Engel & Volkers",
+			"email": "montevideo@engelvoelkers.com",
+			"tel": "2600 2503",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Punta Ballena",
+			"email": "ventas@puntaballenainmobiliaria.com",
+			"tel": "(+598) 94 972 631",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Paiva Park",
+			"email": "info@paivapark.com.uy",
+			"tel": "(+598) 2711 7266",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Viasono",
+			"email": "info@viasono.com.uy",
+			"tel": "(+598)95 780 047",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Intelicasa",
+			"email": "info@intelicasa.uy",
+			"tel": "(+598)91602020",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Aleno Dalmas",
+			"email": "info@alenodalmas.com",
+			"tel": "(+598)99 677 274",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Global Cargo",
+			"email": "gcargo@globalcargouruguay.com",
+			"tel": "(+598)2916 4382",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Indigo",
+			"email": "info@indigo-construcciones.com",
+			"tel": "(+595) 21 339 7367",
+			"ubication": "Paraguay"
+		},
+		{
+			"name": "Artel Iuminación",
+			"email": "artel@internet.com.uy",
+			"tel": "2408 5326",
+			"ubication": "Uruguay"
+		}
+	]
+}

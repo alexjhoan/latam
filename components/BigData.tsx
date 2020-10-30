@@ -12,7 +12,7 @@ export default function BigData() {
 		<React.Fragment>
 			<Row id="bigdata" className="BigDataLanding">
 				<Col xs={24} className="containerLanding">
-					<div className="dColumnCenter">
+					<div className="boxTitle dColumnCenter">
 						<h1 className="title">{t("Big Data")}</h1>
 						<h1 className="title">{t("Conocé más de Uruguay y Paraguay en números")}</h1>
 					</div>
@@ -31,11 +31,25 @@ export default function BigData() {
 				</Col>
 			</Row>
 			<style jsx global>{`
+				.BigDataLanding .containerLanding {
+					background: #f1f1f1;
+					width: 100%;
+					flex: 0 0 100%;
+					padding-bottom: 80px;
+				}
+				.BigDataLanding .containerLanding > div{
+					width: 90%;
+					flex: 0 0 90%;
+					margin: 0 auto;
+				}
+				.BigDataLanding .boxTitle {
+					padding: 30px 0 50px;
+				}
 				.BigDataLanding h1.title, .BigDataLanding .boxImg p {
 			    text-align: center;
 			    font-weight: 900;
-			    font-size: 4vw;
-			    line-height: 4vw;
+			    font-size: 18px;
+			    line-height: 18px;
 			    margin-bottom: 0;
 				}
 				.BigDataLanding h1.title + h1{
@@ -53,6 +67,7 @@ export default function BigData() {
 				}
 				.BigDataLanding .boxImg img {
 				  max-width: 100%;
+				  margin-bottom: 3vh;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
@@ -69,6 +84,16 @@ export default function BigData() {
 					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
 						font-size: 28px;
 						line-height: 32px;
+					}
+				}
+				@media (min-width: ${theme.breakPoints.xxl}){
+					.BigDataLanding .containerLanding > div{
+						width: 80%;
+						flex: 0 0 80%;
+					}
+					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
+						font-size: 30px;
+						line-height: 34px;
 					}
 				}
 			`}</style>
