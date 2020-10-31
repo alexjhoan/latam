@@ -19,7 +19,7 @@ export default function OpenDay() {
 					<div className="viewVideo">
 						<div className="titleVideo dRowCenter dNone dLgFlex">
 			    		<img src="/images/icons/arrowRight.png" alt="." />
-							<p>Una hora de ofertas imperdibles</p>
+							<p>Precios 10% por debajo del mercado</p>
 			    		<img src="/images/icons/arrowLeft.png" alt="." />
 						</div>
 						<div className="theVideo">
@@ -31,16 +31,15 @@ export default function OpenDay() {
 					</div>
 					<div className="contact textCenter">
 						<div className="titleContact dRowCenter">
-			      	<img src="/images/icons/lightning.png" alt="." />
-			      	<p>Ofertas disponibles hasta el xx de noviembre</p>
+			      	<p><img src="/images/icons/lightning.png" alt="." />Ofertas disponibles hasta el 10 de noviembre</p>
 						</div>
 						<p>¿Te interesa?</p>
-						<div className="btnContact dRowCenter">
-							<Button type="primary" href="https://d4webs.com" target="_blank">
+						<div className="btnContact dColumnCenter">
+							<Button type="primary">
 			      		<img src="/images/icons/mail.png" alt="." />
 					      Consultá por mail
 					    </Button>
-					    <Button type="primary" href="https://d4webs.com" target="_blank">
+					    <Button type="primary" href="https://api.whatsapp.com/send?phone=59896207460&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
 			      		<img src="/images/icons/whatsapp.png" alt="." />
 					      Consultá por WhatsApp
 					    </Button>
@@ -58,13 +57,13 @@ export default function OpenDay() {
 			    color: #fff;
 			    margin: 0;
 					font-weight: 900;
-					font-size: 4vw;
-					line-height: 5vw;
+					font-size: 18px;
+					line-height: 18px;
 				}
 				.OpenDayContainer {
 			    display: grid;
 			    grid-template-columns: 1fr;
-			    padding-bottom: 10px!important;
+			    padding-bottom: 15px!important;
 				}
 				.OpenDayLanding .title img{
 					max-width: 50%;
@@ -73,6 +72,8 @@ export default function OpenDay() {
 				.OpenDayLanding .secondParagraph{
 					font-weight: 400;
 					margin-top: 20px;
+					font-size: 15px;
+					line-height: 17px;
 				}
 				.OpenDayLanding .theVideo{
 					padding-top: 56.26%;
@@ -88,17 +89,15 @@ export default function OpenDay() {
 					height: 100%;
 				}
 				.OpenDayLanding .titleContact img {
-				  height: 4vw;
+				  height: 20px;
 				  margin-right: 5px;
 				}
 				.OpenDayLanding .contact > p {
 				  font-weight: 400;
-				}
-				.OpenDayLanding .btnContact{
-					justify-content: space-around;
+				  margin-top: 10px;
 				}
 				.OpenDayLanding .btnContact .ant-btn{
-					margin: 5vh 0;
+					margin: 10px 0 5px;
 					background: #1baae4;
 					border-color: #1baae4;
 					padding: 0 7px;
@@ -108,33 +107,42 @@ export default function OpenDay() {
 					border-color: #31b744;
 				}
 				.OpenDayLanding .btnContact .ant-btn span {
-					font-size: 3vw;
+					font-size: 15px;
 				}
 				.OpenDayLanding .btnContact .ant-btn img {
-			    height: 2.5vw;
+			    height: 20px;
 			    transform: translateY(-2px);
+			    margin-right: 10px;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
-					.OpenDayLanding p, .OpenDayLanding span{
-						font-size: 3vw;
-						line-height: 3.5vw;
+					.OpenDayLanding .btnContact{
+						justify-content: space-around;
+						flex-direction: row;
 					}
-					.OpenDayLanding .btnContact .ant-btn span {
-						font-size: 2vw;
-						padding: 0 7px 15px;
-					}
-					.OpenDayLanding .btnContact .ant-btn img {
-				    height: 20px;
+					.btnContact a:first-child {
+					  margin-right: 10px!important;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
+					.OpenDayContainer {
+				    padding-bottom: 30px!important;
+					}
+					.OpenDayLanding p, .OpenDayLanding span {
+					  font-size: 22px;
+					  line-height: 22px;
+					}
+					.OpenDayLanding .secondParagraph {
+					  font-size: 18px;
+					  line-height: 20px;
+					}
 					.OpenDayLanding .btnContact .ant-btn span{
-						font-size: 14px;
+						font-size: 16px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.OpenDayContainer {
-				    padding-bottom: 100px!important;
+				    padding-bottom: 60px!important;
+				    padding-top: 20px!important;
 					}
 					.OpenDayLanding .lineLeft{
 						display: block;
@@ -204,7 +212,7 @@ export default function OpenDay() {
 					  height: 32px;
 					}
 					.OpenDayLanding .titleVideo p {
-					  font-size: 26px;
+					  font-size: 22px;
 					  margin: 1vh 20px;
 					  text-align: center;
 					}
@@ -224,9 +232,6 @@ export default function OpenDay() {
 					.OpenDayLanding .btnContact .ant-btn img {
 						height: 20px;
 					  margin-right: 5px;
-					}
-					OpenDayLanding .btnContact .ant-btn span {
-						font-size: 16px;
 					}
 				}
 			`}</style>

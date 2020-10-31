@@ -2,6 +2,8 @@ import React from "react";
 import {useTheme} from "../shared-components/Styles/ThemeHook";
 import {Row, Col, Typography, Divider, Statistic} from "antd";
 import { Pie } from 'react-chartjs-2';
+import Fade from 'react-reveal/Fade';
+import CountUp from 'react-countup';
 
 export default function Banner() {
 	const {theme} = useTheme();
@@ -35,8 +37,9 @@ export default function Banner() {
 	  legend: {
 	    display: false
 	  },
-	  tooltips: {
-	  	enabled: false,
+	  animation: {
+	  	animateRotate: true,
+	  	animateScale: true
 	  }
 	};
 
@@ -63,14 +66,18 @@ export default function Banner() {
 				<Col xs={24} className="containerLanding">
 					<Row className="InfBanner">
 						<Col xs={24} md={12} className="imgContainer">
-							<img src="/images/latam.png" alt="." />
+							<Fade left>
+								<img src="/images/latam.png" alt="." />
+							</Fade>
 						</Col>
 						<Col xs={24} md={12}>
-							<Title>Del 4 al 10 de noviembre</Title>
-							<Title>
-								Ofertas exclusivas y oportunidades de inversión en Uruguay y
-								Paraguay por tiempo limitado
-							</Title>
+							<Fade right>
+								<Title>Del 4 al 10 de noviembre</Title>
+								<Title>
+									Ofertas exclusivas y oportunidades de inversión en Uruguay y
+									Paraguay por tiempo limitado
+								</Title>
+							</Fade>
 						</Col>
 					</Row>
 					<Row className="CountersLanding">
@@ -99,7 +106,7 @@ export default function Banner() {
 									<div className="imgInner">
 										<img src="/images/icons/fire.png" alt="." />
 									</div>
-									<p className="titleCounter">XXXX</p>
+									<p className="titleCounter"><CountUp end={385} duration={3} /></p>
 									<span>
 										inversores nos han visitado en las últimas 6 horas
 									</span>
@@ -108,7 +115,7 @@ export default function Banner() {
 									<div className="imgInner">
 										<img src="/images/icons/comment.png" alt="." />
 									</div>
-									<p className="titleCounter">XXXX</p>
+									<p className="titleCounter"><CountUp end={423} duration={3} /></p>
 									<span>están consultando ahora</span>
 								</div>
 							</div>
@@ -119,7 +126,6 @@ export default function Banner() {
 								<div className="imgGrafic">
 									<Pie data={pieData} options={pieOptions}/>
 								</div>
-								{/* TODO: buscar la grafica del banner */}
 								<div className="textGrafic">
 									<p className="titleCounter">¿De dónde nos visitan?</p>
 									<div className="sumaryGrafic innerText">
@@ -136,7 +142,7 @@ export default function Banner() {
 			</Row>
 			<style jsx global>{`
 				.BannerLanding > .containerLanding {
-				  margin-bottom: 5vh;
+				  margin: 5vh auto;
 				}
 				.BannerLanding {
 					background-image: url(/images/header.jpg);
@@ -147,7 +153,8 @@ export default function Banner() {
     			z-index: 1;
 				}
 				.BannerLanding .InfBanner {
-					margin: -50px 0 10vh;
+					margin: -50px 0 5vh;
+					padding-top: 30px;
 				}
 				.BannerLanding .InfBanner .imgContainer,
 				.BannerLanding .imgGrafic {
@@ -165,7 +172,7 @@ export default function Banner() {
 					font-weight: 100;
 					font-size: 1.3rem;
 					text-align: center;
-					line-height: 1.8rem;
+					line-height: 1.5rem;
 					margin-top: 5vh;
 				}
 				.BannerLanding .InfBanner .ant-typography + h1.ant-typography {
@@ -211,7 +218,8 @@ export default function Banner() {
 					padding-left: 6vw;
 				}
 				.CountersLanding .innerText {
-					font-size: 2.5vw;
+					font-size: 12px;
+					line-height: 13px;
 				}
 				.CountersLanding .visitorCounter,
 				.CountersLanding .sumaryGrafic {
@@ -222,7 +230,7 @@ export default function Banner() {
 				}
 				.CountersLanding .graficCounter {
 					display: grid;
-					grid-template-columns: 40% 60%;
+					grid-template-columns: 30% 70%;
 					height: 100%;
 				}
 				.CountersLanding .graficCounter img {
@@ -251,7 +259,7 @@ export default function Banner() {
 			    height: 8px;
 			    width: 8px;
 			    border-radius: 100%;
-			    top: 4px;
+			    top: 1px;
 			    left: -15px;
 				}
 				.CountersLanding .innerText span:first-child .colorGraph{
@@ -269,6 +277,18 @@ export default function Banner() {
 				@media (min-width: ${theme.breakPoints.sm}) {
 					.BannerLanding .InfBanner .ant-typography {
 						font-size: 1.5rem;
+					}
+					.CountersLanding .innerText {
+						font-size: 15px;
+						line-height: 18px;
+					}
+					.CountersLanding .graficCounter {
+						display: grid;
+						grid-template-columns: 40% 60%;
+						height: 100%;
+					}
+					.CountersLanding .innerText span.colorGraph {
+				    top: 4px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}) {
@@ -288,20 +308,16 @@ export default function Banner() {
 						max-width: 70px;
 					}
 					.CountersLanding p.titleCounter {
-						font-size: 2.5vw;
+						font-size: 22px;
 					}
 					.CountersLanding span.ant-statistic-content-value {
-						font-size: 5vw;
-						line-height: 5vw;
+						font-size: 40px;
+						line-height: 40px;
 					}
 					.CountersLanding .textCounter {
-						font-size: 2vw;
+						font-size: 18px;
 						padding-left: 7vw;
 						padding-right: 1vw;
-					}
-					.CountersLanding .innerText {
-						font-size: 2vw;
-						line-height: 2vw;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}) {
@@ -319,19 +335,31 @@ export default function Banner() {
 						max-width: 70px;
 					}
 					.CountersLanding p.titleCounter {
-						font-size: 1.1vw;
+					  font-size: 18px;
+					  line-height: 18px;
 					}
 					.CountersLanding span.ant-statistic-content-value {
-						font-size: 2.4vw;
-						line-height: 2.4vw;
+						font-size: 35px;
+						line-height: 35px;
 					}
 					.CountersLanding .textCounter {
-						font-size: 1vw;
+						font-size: 14px;
 						padding-left: 2vw;
 					}
 					.CountersLanding .innerText {
-						font-size: 1vw;
-						line-height: 1.2vw;
+						font-size: 15px;
+						line-height: 18px;
+						padding-left: 10px;
+					}
+					.CountersLanding .imgInner {
+						position: absolute;
+						left: -10px;
+						top: -1px;
+					}
+				}
+				@media (min-width: ${theme.breakPoints.xl}) {
+					.CountersLanding .textCounter {
+					  padding-left: 3vw;
 					}
 				}
 			`}</style>

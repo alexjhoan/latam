@@ -33,19 +33,21 @@ export default function LandingComponent() {
 					flex: 0 0 90%;
 					max-width: 1400px;
 			    margin: 128px auto 0;
-			    padding: 5vh 15px;
+			    padding: 0 15px 15px;
 				}
 				.dRowCenter{
 					display: flex;
 			    flex-direction: row;
 			    justify-content: center;
 			    align-items: center;
+			    position: relative;
 				}
 				.dColumnCenter{
 					display: flex;
 			    flex-direction: column;
 			    justify-content: center;
 			    align-items: center;
+			    position: relative;
 				}
 				.textCenter{
 					text-align: center;

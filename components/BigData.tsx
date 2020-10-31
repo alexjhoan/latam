@@ -18,12 +18,12 @@ export default function BigData() {
 					</div>
 					<div className="containerImg">
 						<div className="boxImg">
-							<img src="/images/edfs.jpg" alt="" />
+							<img src="/images/informe-rentabilidad-py.jpg" alt="" />
 							<p className="titleImg">{t("Informe de Rentabilidad")}</p>
 							<p className="SubTitleImg">{t("Paraguay 2020")}</p>
 						</div>	
 						<div className="boxImg">
-							<img src="/images/edfs.jpg" alt="" />
+							<img src="/images/informe-rentabilidad-uy.jpg" alt="" />
 							<p className="titleImg">{t("Informe de Rentabilidad")}</p>
 							<p className="SubTitleImg">{t("Paraguay 2020")}</p>
 						</div>
@@ -36,11 +36,13 @@ export default function BigData() {
 					width: 100%;
 					flex: 0 0 100%;
 					padding-bottom: 80px;
+					max-width: none;
 				}
 				.BigDataLanding .containerLanding > div{
 					width: 90%;
 					flex: 0 0 90%;
 					margin: 0 auto;
+					max-width: 1400px;
 				}
 				.BigDataLanding .boxTitle {
 					padding: 30px 0 50px;
@@ -71,8 +73,8 @@ export default function BigData() {
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
-						font-size: 3vw;
-						line-height: 3vw;
+						font-size: 24px;
+						line-height: 24px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
@@ -82,18 +84,14 @@ export default function BigData() {
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
-						font-size: 28px;
-						line-height: 32px;
+						font-size: 26px;
+						line-height: 26px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.xxl}){
 					.BigDataLanding .containerLanding > div{
 						width: 80%;
 						flex: 0 0 80%;
-					}
-					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
-						font-size: 30px;
-						line-height: 34px;
 					}
 				}
 			`}</style>

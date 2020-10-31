@@ -4,6 +4,9 @@ import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
 import {participants} from "./Sponsor.json"
+// DONE: borde al rededor de los logos gris
+
+// DONE: eliminar los anuncionantes que no tienen logo
 
 export default function Sponsor() {
 	const screen = useBreakpoint();
@@ -54,6 +57,7 @@ export default function Sponsor() {
 							<Pagination current={currentPage} total={participants.length} pageSize={totalPerPage} onChange={(page,size)=>setCurrentPage(page)} className="dRowCenter" />
 							: null
 						}
+						<img src="/images/logos.jpg" alt="" className="sponsorLogos" />
 				</Col>
 			</Row>
 			<style jsx global>{`
@@ -71,8 +75,11 @@ export default function Sponsor() {
 				}
 				.SponsorLanding .card {
 				  display: grid;
-				  grid-template-columns: 30% 69%;
-				  grid-column-gap: 1%;
+				  grid-template-columns: 30% 68%;
+				  grid-column-gap: 2%;
+				}
+				.SponsorLanding .card .logo{
+					border: solid 1px #3A4145;
 				}
 				.SponsorLanding .card .logo img {
 					width:100%;
@@ -101,12 +108,14 @@ export default function Sponsor() {
     			font-size: 12px;
     			margin-right: 4px;
 				}
+				.SponsorLanding .sponsorLogos{
+					width:100%;
+					height: auto;
+					margin-top: 30px;
+				}
 				@media (min-width: ${theme.breakPoints.sm}){
-					.SponsorLanding .card p {
-					  font-size: 20px;
-					}
 					.SponsorLanding h1.title {
-						font-size: 3vw;
+						font-size: 22px;
 					}
 					.SponsorLanding .ant-pagination-item, .SponsorLanding ant-pagination-prev, .SponsorLanding ant-pagination-next {
 						min-width: 40px;
@@ -119,6 +128,9 @@ export default function Sponsor() {
 				@media (min-width: ${theme.breakPoints.lg}){
 					.SponsorLanding h1.title {
 						font-size: 28px;
+					}
+					.SponsorLanding .card p {
+					  font-size: 16px;
 					}
 					.SponsorLanding .participants {
 					  grid-template-columns: 1fr 1fr;

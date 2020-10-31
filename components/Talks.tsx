@@ -37,8 +37,8 @@ export default function Talks() {
         <div className="itemVideo">
 					<iframe src={`https://www.youtube.com/embed/${a.idVideo}`}></iframe>
 				</div>
-				<p>{a.title}</p>
-				<p>{a.subTitle}</p>
+				{/*<p>{a.title}</p>
+				<p>{a.subTitle}</p>*/}
       </SwiperSlide>
     )
   })
@@ -83,11 +83,13 @@ export default function Talks() {
 					background: #f1f1f1;
 					width: 100%;
 					flex: 0 0 100%;
+					max-width: none;
 				}
 				.TalksLanding .containerLanding > div{
 					width: 90%;
 					flex: 0 0 90%;
 					margin: 0 auto;
+					max-width: 1400px;
 				}
 				.TalksLanding .titleTalks {
 					font-size: 18px;
