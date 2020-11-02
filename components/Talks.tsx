@@ -50,6 +50,10 @@ export default function Talks() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
     breakpoints: {
       992: {
         slidesPerView: 3,
@@ -97,6 +101,7 @@ export default function Talks() {
 					margin-bottom: 3vh;
   				font-weight: 900;
   				line-height: 18px;
+  				padding-top: 30px;
 				}
 				.TalksLanding .itemVideo{
 					padding-top: 56.26%;

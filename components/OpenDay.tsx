@@ -35,7 +35,7 @@ export default function OpenDay() {
 						</div>
 						<p>¿Te interesa?</p>
 						<div className="btnContact dColumnCenter">
-							<Button type="primary">
+							<Button type="primary" href="https://www.infocasas.com.uy/proyectos/form/latam-invierte/amp2" target="_blank">
 			      		<img src="/images/icons/mail.png" alt="." />
 					      Consultá por mail
 					    </Button>
@@ -101,6 +101,7 @@ export default function OpenDay() {
 					background: #1baae4;
 					border-color: #1baae4;
 					padding: 0 7px;
+					min-width: 216px;
 				}
 				.OpenDayLanding .btnContact .ant-btn:last-child{
 					background: #31b744;

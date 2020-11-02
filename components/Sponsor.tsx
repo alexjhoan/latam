@@ -78,12 +78,11 @@ export default function Sponsor() {
 				  grid-template-columns: 30% 68%;
 				  grid-column-gap: 2%;
 				}
-				.SponsorLanding .card .logo{
-					border: solid 1px #3A4145;
-				}
 				.SponsorLanding .card .logo img {
 					width:100%;
 					height auto;
+					border: solid 1px #3A4145;
+					padding: 25px 0;
 				}
 				.SponsorLanding .card p {
 				  font-size: 15px;

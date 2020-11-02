@@ -4,6 +4,8 @@ import {Row, Col, Typography, Divider, Statistic} from "antd";
 import { Pie } from 'react-chartjs-2';
 import Fade from 'react-reveal/Fade';
 import CountUp from 'react-countup';
+import Lottie from 'react-lottie';
+import * as animationReloj from './reloj/data.json'
 
 export default function Banner() {
 	const {theme} = useTheme();
@@ -60,19 +62,28 @@ export default function Banner() {
 		counter = (<Statistic value={"7 : 00 : 00 : 00"} />);
 	}
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationReloj.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
 	return (
 		<React.Fragment>
 			<Row className="BannerLanding">
 				<Col xs={24} className="containerLanding">
 					<Row className="InfBanner">
-						<Col xs={24} md={12} className="imgContainer">
+						<Col xs={24} md={12} className="imgContainer dColumnCenter">
 							<Fade left>
 								<img src="/images/latam.png" alt="." />
 							</Fade>
 						</Col>
 						<Col xs={24} md={12}>
 							<Fade right>
-								<Title>Del 4 al 10 de noviembre</Title>
+								<Title className="titleDate">Del 4 al 10 de noviembre</Title>
 								<Title>
 									Ofertas exclusivas y oportunidades de inversión en Uruguay y
 									Paraguay por tiempo limitado
@@ -83,7 +94,7 @@ export default function Banner() {
 					<Row className="CountersLanding">
 						<Col xs={24} lg={8} className="timeDescounts">
 							<div className="img-HourGlass">
-								<img src="/images/icons/HourGlass.png" alt="." />
+								<Lottie options={defaultOptions} />
 							</div>
 							<div className="timeCounter">
 								<p className="titleCounter">
@@ -154,7 +165,7 @@ export default function Banner() {
 				}
 				.BannerLanding .InfBanner {
 					margin: -50px 0 5vh;
-					padding-top: 30px;
+					padding-top: 60px;
 				}
 				.BannerLanding .InfBanner .imgContainer,
 				.BannerLanding .imgGrafic {
@@ -164,16 +175,21 @@ export default function Banner() {
 					align-items: center;
 				}
 				.BannerLanding .InfBanner .imgContainer img {
-					width: 400px;
+					width: 300px;
 					max-width: 100%;
 				}
 				.BannerLanding .InfBanner .ant-typography {
 					color: #fff;
-					font-weight: 100;
+					font-weight: 900;
 					font-size: 1.3rem;
 					text-align: center;
 					line-height: 1.5rem;
 					margin-top: 5vh;
+				}
+				.BannerLanding .InfBanner .titleDate {
+					border: solid 2px #fff;
+					margin-top: 0;
+					padding: 10px;
 				}
 				.BannerLanding .InfBanner .ant-typography + h1.ant-typography {
 					font-weight: 800;
@@ -330,13 +346,13 @@ export default function Banner() {
 						display: none;
 					}
 					.CountersLanding .img-HourGlass {
-						width: 3vw;
-						margin-right: 7px;
+						width: 4vw;
 						max-width: 70px;
 					}
 					.CountersLanding p.titleCounter {
-					  font-size: 18px;
-					  line-height: 18px;
+					  font-size: 16px;
+					  line-height: 16px;
+					  margin-bottom: 5px;
 					}
 					.CountersLanding span.ant-statistic-content-value {
 						font-size: 35px;
@@ -347,8 +363,8 @@ export default function Banner() {
 						padding-left: 2vw;
 					}
 					.CountersLanding .innerText {
-						font-size: 15px;
-						line-height: 18px;
+						font-size: 14px;
+						line-height: 15px;
 						padding-left: 10px;
 					}
 					.CountersLanding .imgInner {

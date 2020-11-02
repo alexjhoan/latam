@@ -29,8 +29,8 @@ export default function LandingComponent() {
 					margin-top: -100px;
 				}
 				.containerLanding{
-					width: 90%;
-					flex: 0 0 90%;
+					width: 100%;
+					flex: 0 0 100%;
 					max-width: 1400px;
 			    margin: 128px auto 0;
 			    padding: 0 15px 15px;

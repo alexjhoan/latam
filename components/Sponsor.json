@@ -1,7 +1,7 @@
 {
 	"participants":[
 		{
-			"name": "Florencia",
+			"name": "Continents",
 			"email": "info@male.com.py",
 			"tel": "+54 9 11 6202-7237",
 			"ubication": "Uruguay"
@@ -14,8 +14,14 @@
 		},
 		{
 			"name": "M4",
-			"email": "galeriam4@m4.com.py",
-			"tel": "595 981 229900",
+			"email": "info@beone.com.uy",
+			"tel": "598 95 666 041",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "BeOne",
+			"email": "info@beone.com.uy",
+			"tel": "598 95 666 041",
 			"ubication": "Paraguay"
 		},
 		{
@@ -49,15 +55,9 @@
 			"ubication": "Uruguay"
 		},
 		{
-			"name": "Green Park",
-			"email": "greenpark@gruposolanas.com",
-			"tel": "2711 3800",
-			"ubication": "Uruguay"
-		},
-		{
-			"name": "Altius",
-			"email": "info@altius.com.uy",
-			"tel": "(+598)08008911",
+			"name": "BDP",
+			"email": "info@bdp.com.uy",
+			"tel": "091 857 562",
 			"ubication": "Uruguay"
 		},
 		{
@@ -67,10 +67,34 @@
 			"ubication": "Uruguay"
 		},
 		{
+			"name": "Altius",
+			"email": "info@altius.com.uy",
+			"tel": "(+598)08008911",
+			"ubication": "Uruguay"
+		},
+		{
 			"name": "Kosak",
 			"email": "info@kosak.com.uy",
 			"tel": "(+598) 2707 1871",
 			"ubication": "Uruguay"
+		},
+		{
+			"name": "Abate",
+			"email": "info@abate.com.uy",
+			"tel": "(+598) 2707 0700",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Pointer",
+			"email": "hola@pointer.uy",
+			"tel": "(+598) 2707 8727",
+			"ubication": "Uruguay"
+		},
+		{
+			"name": "Genus",
+			"email": "",
+			"tel": "595 981 534438",
+			"ubication": "Paraguay"
 		},
 		{
 			"name": "Avanza",
@@ -139,6 +163,12 @@
 			"ubication": "Uruguay"
 		},
 		{
+			"name": "BBVA",
+			"email": "",
+			"tel": "",
+			"ubication": "Uruguay"
+		},
+		{
 			"name": "Viasono",
 			"email": "info@viasono.com.uy",
 			"tel": "(+598)95 780 047",
@@ -157,9 +187,9 @@
 			"ubication": "Uruguay"
 		},
 		{
-			"name": "Global Cargo",
-			"email": "gcargo@globalcargouruguay.com",
-			"tel": "(+598)2916 4382",
+			"name": "4S",
+			"email": "",
+			"tel": "",
 			"ubication": "Uruguay"
 		},
 		{
