@@ -17,7 +17,7 @@ export default function LandingComponent() {
 			<Banner />
 			<OpenDay />
 			<Properties />
-			<Talks />
+			{/*<Talks />*/}
 			<Sponsor />
 			<BigData />
 			<Footer />
