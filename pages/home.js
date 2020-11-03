@@ -1,7 +1,5 @@
-import { BannerPopUp } from "../shared-components/Components/Banners/BannerPopUp/web";
-import { HomeLayout } from "../shared-components/ViewFragments/Home/web";
 import { MetaTags } from "../shared-components/Components/SEO/web";
-import React, { useEffect } from "react";
+import React from "react";
 import { withApollo } from "../lib/apollo3";
 import { withAuth } from "../lib/auth";
 import { withContext } from "../lib/context";
@@ -14,27 +12,11 @@ import LandingComponent from "../components/LandingComponent"
 
 // Home Page
 const Home = () => {
-	const FBpixel = useFacebookPixel();
-	const GA = useGoogleAnalytics();
-	const GTM = useGoogleTagManager();
-	const OneSignal = useOneSignal();
-
-	useEffect(() => {
-		FBpixel.Init();
-		FBpixel.PageViewEvent();
-
-		GA.Init();
-		GA.PageViewEvent();
-		setTimeout(() => GA.Event({ category: "IC2", action: "Home" }), 5000);
-		setTimeout(() => {
-			GA.Event({ category: "usario_valido", action: "el usuario paso mas de 30 segundos" });
-		}, 30000);
-
-		GTM.Init();
-		GTM.PageViewEvent({ page: "landing test" });
-
-		OneSignal.Init();
-	}, []);
+	
+	useFacebookPixel();
+	useGoogleAnalytics();
+	useGoogleTagManager();
+	useOneSignal();
 
 	return (
 		<React.Fragment>
