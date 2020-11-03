@@ -16,8 +16,8 @@ const randomNumber = (min:number, max:number) => {
 }
 
 export default function Banner() {
-	const [countFire, setCountFire] = React.useState(randomNumber(189, 432))
-	const [countComment, setCountComment] = React.useState(randomNumber(215, 482))
+	const [countFire, setCountFire] = React.useState(randomNumber(325, 632))
+	const [countComment, setCountComment] = React.useState(randomNumber(102, 215))
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
@@ -70,7 +70,20 @@ export default function Banner() {
 		counter = (<Statistic value={"7 : 00 : 00 : 00"} />);
 	}
 
+	const numero = () => {
+		if (prob === 1) {
+			setCountFire(countFire - amountChange)
+			setCountComment(countComment - amountChange)
+		} else {
+			setCountFire(countFire + amountChange)
+			setCountComment(countComment - amountChange)
+		}
+	}
 
+	const tiempo = () =>{
+		setTimeout(numero, 5000)
+		console.log("funciona")
+	}
 
   const defaultOptions = {
     loop: true,
