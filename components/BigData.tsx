@@ -18,14 +18,18 @@ export default function BigData() {
 					</div>
 					<div className="containerImg">
 						<div className="boxImg">
-							<img src="/images/informe-rentabilidad-py.jpg" alt="" />
-							<p className="titleImg">{t("Informe de Rentabilidad")}</p>
-							<p className="SubTitleImg">{t("Paraguay 2020")}</p>
+						 <a href="https://www.infocasas.com.uy/blog/informe-infocasas-la-rentabilidad-en-uruguay-2020" target="_blank">
+								<img src="/images/informe-rentabilidad-uy.jpg" alt="" />
+								<p className="titleImg">{t("Informe de Rentabilidad")}</p>
+								<p className="SubTitleImg">{t("Uruguay 2020")}</p>
+							</a>
 						</div>	
 						<div className="boxImg">
-							<img src="/images/informe-rentabilidad-uy.jpg" alt="" />
-							<p className="titleImg">{t("Informe de Rentabilidad")}</p>
-							<p className="SubTitleImg">{t("Paraguay 2020")}</p>
+							 <a href="https://www.infocasas.com.py/blog/informe-infocasas-la-rentabilidad-en-paraguay-2020" target="_blank">
+								<img src="/images/informe-rentabilidad-py.jpg" alt="" />
+								<p className="titleImg">{t("Informe de Rentabilidad")}</p>
+								<p className="SubTitleImg">{t("Paraguay 2020")}</p>
+							</a>
 						</div>
 					</div>
 				</Col>
