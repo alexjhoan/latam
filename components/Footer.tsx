@@ -4,7 +4,7 @@ export default function Footer() {
 	return (
 		<React.Fragment>
 			<div className="dRowCenter footer">
-				<img src="/images/latam.png" alt="." />
+				<img src="/images/logo-footer.png" alt="." />
 			</div>
 			<style jsx global>{`
 				.footer {
@@ -13,7 +13,9 @@ export default function Footer() {
 				}
 				.footer img{
 					width: auto;
-					height: 70px;
+			    max-height: 70px;
+			    max-width: 90%;
+			    height: auto;
 				}
 			`}</style>
 		</React.Fragment>

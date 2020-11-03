@@ -3,6 +3,9 @@ import {SearchResultsCards} from '../shared-components/ViewFragments/SearchResul
 import {Row, Col, Button} from "antd";
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
+import Lottie from 'react-lottie';
+import { useCountUp } from 'react-countup';
+import * as animationBanner from './animations/banner-properties/data.json'
 
 const listUy = [
 	"Proyectos de Vivienda Promovida",
@@ -17,19 +20,52 @@ const listPy = [
 	"Propuestas de inversión desde USD 12.500."
 ]
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationBanner.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+
 export default function Properties() {
 	const { theme } = useTheme();
 	const { t } = useTranslation();
+
+	const { countUp: countUpUy, start: startUy } = useCountUp({
+    end: 300,
+    duration: 1.5,
+    prefix: "+",
+    onReset: () => startUy,
+    onEnd: () => setTimeout(startUy, 1000)
+  });
+
+  const { countUp: countUpPy, start: startPy } = useCountUp({
+    end: 200,
+    duration: 1.5,
+    prefix: "+",
+    onReset: () => startPy,
+    onEnd: () => setTimeout(startPy, 1000)
+  });
+  
 	return (
 		<React.Fragment>
 			<Row id="properties" className="propertiesLanding">
 				<Col xs={24} className="containerLanding">
-					<img src="/images/banner-props.png" alt="." className="img-banner"/>
+					<Lottie options={defaultOptions} height="auto"/>
 					<div className="containerProps">
 						<div className="itemProps dColumnCenter">
-							<img src="/images/uy.jpg" alt="."/>
+							<div className="couterPropeties">
+								<img src="/images/uy.jpg" alt="."/>
+								<div className="textCounter">
+									<span>{countUpUy}</span>
+									<p className="textOfert">{t("ofertas")}</p>
+								</div>
+							</div>
 							<div className="detailsItem dColumnCenter">
-								<Button type="primary">{t("Ver propiedades")}</Button>
+								<Button href="https://www.infocasas.com.py/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
 								<div className="listDetails">
 									{
 										listUy.map((item, i) => {
@@ -45,9 +81,15 @@ export default function Properties() {
 							</div>
 						</div>
 						<div className="itemProps dColumnCenter">
-							<img src="/images/py.jpg" alt="."/>
+							<div className="couterPropeties">
+								<img src="/images/py.jpg" alt="."/>
+								<div className="textCounter">
+									<span>{countUpPy}</span>
+									<p className="textOfert">{t("ofertas")}</p>
+								</div>
+							</div>
 							<div className="detailsItem dColumnCenter">
-								<Button type="primary">{t("Ver propiedades")}</Button>
+								<Button href="https://www.infocasas.com.uy/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
 								<div className="listDetails">
 									{
 										listPy.map((item, i) => {
@@ -74,6 +116,28 @@ export default function Properties() {
 				  grid-template-columns: 1fr;
 				  grid-gap: 45px 20px;
 				  margin-top: 15px;
+				}
+				.propertiesLanding .couterPropeties {
+				  position: relative;
+				  width: 100%;
+				}
+				.propertiesLanding .textCounter {
+				  position: absolute;
+				  top: 43%;
+				  left: 3%;
+				}
+				.propertiesLanding .couterPropeties span{
+					color:#fff;
+					font-weight: 900;
+					font-size: 7vw;
+    			line-height: 6vw;
+				}
+				.propertiesLanding .couterPropeties p{
+					color: #fff;
+					font-weight: 900;
+					font-size: 5vw;
+					line-height: 3vw;
+					margin-bottom: 0;
 				}
 				.propertiesLanding .itemProps {
 					justify-content: flex-start;
@@ -112,6 +176,14 @@ export default function Properties() {
 					.propertiesLanding .containerProps {
 					  grid-template-columns: 1fr 1fr;
 					}
+					.propertiesLanding .couterPropeties span{
+						font-size: 3.3vw;
+	    			line-height: 3vw;
+					}
+					.propertiesLanding .couterPropeties p{
+						font-size: 2.2vw;
+						line-height: 1vw;
+					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.propertiesLanding .detailsItem button {
@@ -124,9 +196,27 @@ export default function Properties() {
 				    font-size: 20px;
 					}
 				}
+				@media (min-width: ${theme.breakPoints.xl}){
+					.propertiesLanding .couterPropeties span{
+						font-size: 3.1vw;
+	    			line-height: 3vw;
+					}
+					.propertiesLanding .couterPropeties p{
+						font-size: 2vw;
+						line-height: 1vw;
+					}
+				}
 				@media (min-width: ${theme.breakPoints.xxl}){
 					.propertiesLanding .detailsItem {
 						width: 60%;
+					}
+					.propertiesLanding .couterPropeties span{
+						font-size: 45px;
+	    			line-height: 38px;
+					}
+					.propertiesLanding .couterPropeties p{
+						font-size: 33px;
+						line-height: 25px;
 					}
 				}
 			`}</style>

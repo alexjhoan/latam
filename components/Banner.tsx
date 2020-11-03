@@ -5,15 +5,28 @@ import { Pie } from 'react-chartjs-2';
 import Fade from 'react-reveal/Fade';
 import CountUp from 'react-countup';
 import Lottie from 'react-lottie';
-import * as animationReloj from './reloj/data.json'
+import * as animationReloj from './animations/reloj/data.json'
+import * as animationLatAm from './animations/logo-latam/data.json'
+import * as animationFire from './animations/fire/data.json'
+import * as animationComments from './animations/comments/data.json'
+
+const randomNumber = (min:number, max:number) => {
+	let num = Math.round((Math.random() * (max - min)) + min);
+	return num
+}
 
 export default function Banner() {
+	const [countFire, setCountFire] = React.useState(randomNumber(189, 432))
+	const [countComment, setCountComment] = React.useState(randomNumber(215, 482))
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
 	const deadline = Date.parse("11/10/2020");
 	const today = Date.now();
 	const init = Date.parse("11/04/2020");
+	const amountChange = randomNumber(1, 5)
+	const prob = randomNumber(1, 3)
+
 
 	const pieData = {
 		labels: [
@@ -45,10 +58,6 @@ export default function Banner() {
 	  }
 	};
 
-	function onFinish() {
-		console.log("finished!");
-	}
-
 	let counter: any;
 	if (today > init) {
 		counter = (
@@ -62,10 +71,36 @@ export default function Banner() {
 		counter = (<Statistic value={"7 : 00 : 00 : 00"} />);
 	}
 
+
+
   const defaultOptions = {
     loop: true,
     autoplay: true, 
     animationData: animationReloj.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const LatAmOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationLatAm.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const fireOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationFire.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const CommentsOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationComments.default,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -78,34 +113,38 @@ export default function Banner() {
 					<Row className="InfBanner">
 						<Col xs={24} md={12} className="imgContainer dColumnCenter">
 							<Fade left>
-								<img src="/images/latam.png" alt="." />
+								<div className="containerAnimation">
+									<Lottie options={LatAmOptions} height={150}/>
+								</div>
 							</Fade>
 						</Col>
 						<Col xs={24} md={12}>
 							<Fade right>
-								<Title className="titleDate">Del 4 al 10 de noviembre</Title>
-								<Title>
+								<p className="titleDate"><span>Del 4 al 10 de noviembre</span></p>
+								<p className="subTitle">
 									Ofertas exclusivas y oportunidades de inversión en Uruguay y
 									Paraguay por tiempo limitado
-								</Title>
+								</p>
 							</Fade>
 						</Col>
 					</Row>
 					<Row className="CountersLanding">
-						<Col xs={24} lg={8} className="timeDescounts">
-							<div className="img-HourGlass">
-								<Lottie options={defaultOptions} />
-							</div>
-							<div className="timeCounter">
-								<p className="titleCounter">
-									Tiempo para comprar con descuentos:
-								</p>
-								{counter}
-								<div className="textCounter">
-									<span>días</span>
-									<span>horas</span>
-									<span>minutos</span>
-									<span>segundos</span>
+						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
+							<p className="titleCounter">
+								Tiempo para comprar con descuentos:
+							</p>
+							<div className="dRowCenter">
+								<div className="img-HourGlass">
+									<Lottie options={defaultOptions}/>
+								</div>
+								<div className="timeCounter">
+									{counter}
+									<div className="textCounter">
+										<span>días</span>
+										<span>horas</span>
+										<span>minutos</span>
+										<span>segundos</span>
+									</div>
 								</div>
 							</div>
 						</Col>
@@ -115,30 +154,34 @@ export default function Banner() {
 							<div className="visitorCounter">
 								<div className="innerText">
 									<div className="imgInner">
-										<img src="/images/icons/fire.png" alt="." />
+										<div className="animationContent">
+											<Lottie options={fireOptions} height={25} width={30}/>
+										</div>
+										<p className="titleCounter"><CountUp end={countFire} duration={1} /></p>
 									</div>
-									<p className="titleCounter"><CountUp end={385} duration={3} /></p>
 									<span>
 										inversores nos han visitado en las últimas 6 horas
 									</span>
 								</div>
 								<div className="innerText">
 									<div className="imgInner">
-										<img src="/images/icons/comment.png" alt="." />
+										<div className="animationContent">
+											<Lottie options={CommentsOptions} height={25} width={30}/>
+										</div>
+										<p className="titleCounter"><CountUp end={countComment} duration={1} /></p>
 									</div>
-									<p className="titleCounter"><CountUp end={423} duration={3} /></p>
-									<span>están consultando ahora</span>
+									<span>personas están consultando ahora</span>
 								</div>
 							</div>
 						</Col>
 						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8}>
+						<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
+						<p className="titleCounter">¿De dónde nos visitan?</p>
 							<div className="graficCounter">
 								<div className="imgGrafic">
 									<Pie data={pieData} options={pieOptions}/>
 								</div>
-								<div className="textGrafic">
-									<p className="titleCounter">¿De dónde nos visitan?</p>
+								<div className="textGrafic dColumnCenter">
 									<div className="sumaryGrafic innerText">
 										<span><span className="colorGraph"></span>Argentina</span>
 										<span><span className="colorGraph"></span>Paraguay</span>
@@ -178,7 +221,7 @@ export default function Banner() {
 					width: 300px;
 					max-width: 100%;
 				}
-				.BannerLanding .InfBanner .ant-typography {
+				.BannerLanding .InfBanner span, .BannerLanding .InfBanner p {
 					color: #fff;
 					font-weight: 900;
 					font-size: 1.3rem;
@@ -187,14 +230,17 @@ export default function Banner() {
 					margin-top: 5vh;
 				}
 				.BannerLanding .InfBanner .titleDate {
+					text-align: center;
+					margin: 0;
+				}
+				.BannerLanding .InfBanner .titleDate span{
 					border: solid 2px #fff;
 					margin-top: 0;
 					padding: 10px;
 				}
-				.BannerLanding .InfBanner .ant-typography + h1.ant-typography {
-					font-weight: 800;
-					margin-top: 0;
-					text-align: left;
+				.BannerLanding .InfBanner p.subTitle {
+					font-weight: 900;
+					text-align: center;
 				}
 				.CountersLanding {
 					background: #fff;
@@ -202,24 +248,27 @@ export default function Banner() {
 					border-radius: 20px;
 					box-shadow: 0px 5px 8px #0000009f;
 				}
-				.CountersLanding .timeDescounts,
 				.CountersLanding .ant-statistic-content {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 					justify-content: center;
 				}
+				.CountersLanding .counterContainer, .CountersLanding .CounterDivider, .CountersLanding .metricsContainer{
+					justify-content: flex-start;
+				}
 				.CountersLanding .img-HourGlass img {
 					max-width: 100%;
 				}
 				.CountersLanding .img-HourGlass {
-					width: 10vw;
+					width: 12vw;
 					margin-right: 2vw;
+					margin-top: 5px;
 				}
 				.CountersLanding p.titleCounter {
 					margin: 0;
 					font-weight: 900;
-					font-size: 3.3vw;
+					font-size: 14px;
 				}
 				.CountersLanding span.ant-statistic-content-value {
 					font-size: 8vw;
@@ -231,41 +280,48 @@ export default function Banner() {
 					flex-direction: row;
 					justify-content: space-between;
 					font-size: 2.5vw;
-					padding-left: 6vw;
 				}
 				.CountersLanding .innerText {
 					font-size: 12px;
 					line-height: 13px;
+					width: 100%;
 				}
 				.CountersLanding .visitorCounter,
 				.CountersLanding .sumaryGrafic {
 					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-column-gap: 10px;
-					margin-top: 10px;
+					grid-template-columns: 46% 46%;
+					grid-column-gap: 8%;
+					margin: 10px 8% 0 10%;
+				}
+				.CountersLanding .sumaryGrafic {
+					grid-template-columns: 48% 48%;
+					grid-column-gap: 4%;
+					margin: 10px 8% 0 20%;
 				}
 				.CountersLanding .graficCounter {
 					display: grid;
 					grid-template-columns: 30% 70%;
 					height: 100%;
+					width: 100%;
+					max-width: 350px;
+				}
+				.CountersLanding .graficCounter .textGrafic{
+					width: 100%;
+				}
+				.CountersLanding .graficCounter .imgGrafic {
+					margin: 0 -20px;
 				}
 				.CountersLanding .graficCounter img {
 					width: 100%;
 					max-width: 70px;
 					height: auto;
 				}
-				.CountersLanding .innerText {
-					padding-left: 25px;
-					position: relative;
-				}
 				.CountersLanding .imgInner {
-					position: absolute;
-					left: 0px;
-					top: 1px;
+					display: flex;
+					flex-direction: row;
 				}
-				.CountersLanding .imgInner img {
-					height: 20px;
-					width: auto;
+				.CountersLanding .imgInner .animationContent {
+					transform: translateY(-8px);
 				}
 				.CountersLanding .innerText span:not(.colorGraph) {
 				  position: relative;
@@ -291,8 +347,15 @@ export default function Banner() {
 					background: #ffae2b;
 				}
 				@media (min-width: ${theme.breakPoints.sm}) {
-					.BannerLanding .InfBanner .ant-typography {
+					.BannerLanding .InfBanner span {
 						font-size: 1.5rem;
+					}
+					.CountersLanding span.ant-statistic-content-value {
+						font-size: 40px;
+						line-height: 40px;
+					}
+					.CountersLanding p.titleCounter {
+						font-size: 16px;
 					}
 					.CountersLanding .innerText {
 						font-size: 15px;
@@ -312,14 +375,20 @@ export default function Banner() {
 					.BannerLanding .imgContainer + .ant-col {
 						padding: 0 15px;
 					}
+					.BannerLanding .InfBanner .titleDate {
+						text-align: left;
+					}
+					.BannerLanding .InfBanner p.subTitle {
+						text-align: left;
+					}
 					.BannerLanding .CountersLanding {
 						padding: 20px;
 					}
-					.BannerLanding .InfBanner .ant-typography {
+					.BannerLanding .InfBanner span {
 						text-align: left;
 					}
 					.CountersLanding .img-HourGlass {
-						width: 5vw;
+						width: 8vw;
 						margin-right: 15px;
 						max-width: 70px;
 					}
@@ -332,8 +401,6 @@ export default function Banner() {
 					}
 					.CountersLanding .textCounter {
 						font-size: 18px;
-						padding-left: 7vw;
-						padding-right: 1vw;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}) {
@@ -350,32 +417,26 @@ export default function Banner() {
 						max-width: 70px;
 					}
 					.CountersLanding p.titleCounter {
-					  font-size: 16px;
-					  line-height: 16px;
+					  font-size: 15px;
+					  line-height: 15px;
 					  margin-bottom: 5px;
 					}
 					.CountersLanding span.ant-statistic-content-value {
-						font-size: 35px;
-						line-height: 35px;
+						font-size: 30px;
+						line-height: 30px;
 					}
 					.CountersLanding .textCounter {
-						font-size: 14px;
-						padding-left: 2vw;
+						font-size: 12px;
 					}
 					.CountersLanding .innerText {
 						font-size: 14px;
 						line-height: 15px;
-						padding-left: 10px;
-					}
-					.CountersLanding .imgInner {
-						position: absolute;
-						left: -10px;
-						top: -1px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.xl}) {
-					.CountersLanding .textCounter {
-					  padding-left: 3vw;
+					.CountersLanding p.titleCounter {
+					  font-size: 17px;
+					  line-height: 17px;
 					}
 				}
 			`}</style>

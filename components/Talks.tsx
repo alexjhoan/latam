@@ -24,6 +24,11 @@ const dataVideo = [
 		title: 'Invertir en la Región',
 		subTitle: 'Estreno 05/11 - 10:30 am',
 		idVideo: '3Qp3kSpKrpM'
+	},
+	{
+		title: 'Invertir en la Región',
+		subTitle: 'Estreno 05/11 - 10:30 am',
+		idVideo: '3Qp3kSpKrpM'
 	}
 ]
 
@@ -51,9 +56,9 @@ export default function Talks() {
       prevEl: '.swiper-button-prev'
     },
     autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-      },
+      delay: 3000,
+      disableOnInteraction: false
+    },
     breakpoints: {
       992: {
         slidesPerView: 3,
@@ -94,6 +99,7 @@ export default function Talks() {
 					flex: 0 0 90%;
 					margin: 0 auto;
 					max-width: 1400px;
+					padding-bottom: 60px;
 				}
 				.TalksLanding .titleTalks {
 					font-size: 18px;
@@ -101,7 +107,7 @@ export default function Talks() {
 					margin-bottom: 3vh;
   				font-weight: 900;
   				line-height: 18px;
-  				padding-top: 30px;
+  				padding-top: 60px;
 				}
 				.TalksLanding .itemVideo{
 					padding-top: 56.26%;
@@ -123,19 +129,20 @@ export default function Talks() {
 				  font-weight: 900;
 				}
 				.TalksLanding .swiper-button-next, .TalksLanding .swiper-button-prev {
-					top: 43%;
+					top: 51%;
 			    background: #ffffff8c;
-			    padding: 22px;
+			    padding: 0;
 			    border-radius: 100%;
 			    box-shadow: 3px 3px 3px #0000006f;
-			    transition: ease-in-out .3s
+			    transition: ease-in-out .3s;
+			    height: 28px;
 				}
 				.TalksLanding .swiper-button-next:hover, .TalksLanding .swiper-button-prev:hover {
 					background: #ffffff;
 					transition: ease-in-out .3s;
 				}
 				.TalksLanding .swiper-button-next:after, .TalksLanding .swiper-button-prev:after {
-					font-size: 22px;
+					font-size: 15px;
 					color: ${theme.colors.textColor};
 					font-weight: 900;
 				}
@@ -147,7 +154,7 @@ export default function Talks() {
 				@media (min-width: ${theme.breakPoints.lg}){
 					.TalksLanding .titleTalks {
 						font-size: 28px;
-						padding: 3vh 0;
+						padding: 30px 0 0;
 						text-align: center;
 						margin-bottom: 5vh;
     				font-weight: 900;

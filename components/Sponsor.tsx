@@ -4,9 +4,6 @@ import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
 import {participants} from "./Sponsor.json"
-// DONE: borde al rededor de los logos gris
-
-// DONE: eliminar los anuncionantes que no tienen logo
 
 export default function Sponsor() {
 	const screen = useBreakpoint();
@@ -35,6 +32,7 @@ export default function Sponsor() {
 					<p className="name">{item.name}</p>
 					<p>{item.email}</p>
 					<p>{item.tel}</p>
+					<a href={`https://${item.url}`} target="_blank" className='itemLink'>{item.url}</a>
 					<div className="ubication dRowCenter">
 						<img src={`/images/flags/${item.ubication}.png`} alt="" />
 						<p>{t(item.ubication)}</p>
@@ -57,7 +55,9 @@ export default function Sponsor() {
 							<Pagination current={currentPage} total={participants.length} pageSize={totalPerPage} onChange={(page,size)=>setCurrentPage(page)} className="dRowCenter" />
 							: null
 						}
-						<img src="/images/logos.jpg" alt="" className="sponsorLogos" />
+						<div className="containerLogos">
+							<img src="/images/logos.jpg" alt="" className="sponsorLogos" />
+						</div>
 				</Col>
 			</Row>
 			<style jsx global>{`
@@ -66,6 +66,7 @@ export default function Sponsor() {
 			    font-weight: 900;
 			    font-size: 18px;
 			    line-height: 18px;
+			    padding-top: 30px;
 				}
 				.SponsorLanding .participants {
 				  display: grid;
@@ -82,15 +83,23 @@ export default function Sponsor() {
 					width:100%;
 					height auto;
 					border: solid 1px #3A4145;
-					padding: 25px 0;
+					padding: 10px 0;
 				}
 				.SponsorLanding .card p {
 				  font-size: 15px;
 				  margin-bottom: 0;
     			word-break: break-word;
+    			line-height: 20px;
 				}
 				.SponsorLanding .card p.name {
 				  font-weight: 900;
+				}
+				.SponsorLanding .card .itemLink{
+					color: #3A4145;
+				}
+				.SponsorLanding .card .itemLink:hover{
+					color: #3A4145;
+					text-decoration: underline;
 				}
 				.SponsorLanding .card .ubication {
 				  justify-content: flex-start;
@@ -111,6 +120,9 @@ export default function Sponsor() {
 					width:100%;
 					height: auto;
 					margin-top: 30px;
+				}
+				.SponsorLanding .containerLogos{
+					margin: 0 -15px;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.SponsorLanding h1.title {
@@ -133,6 +145,9 @@ export default function Sponsor() {
 					}
 					.SponsorLanding .participants {
 					  grid-template-columns: 1fr 1fr;
+					}
+					.SponsorLanding .containerLogos{
+						margin: 0;
 					}
 				}
 			`}</style>

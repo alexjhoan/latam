@@ -73,6 +73,10 @@ export default function LandingComponent() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
+					.containerLanding{
+						width: 90%;
+						flex: 0 0 90%;
+					}
 					.dMdNone{
 						display: none;
 					}
@@ -94,7 +98,7 @@ export default function LandingComponent() {
 						display: flex;
 					}
 				}
-				@media (min-width: ${theme.breakPoints.xxl}){
+				@media (min-width: ${theme.breakPoints.xl}){
 					.containerLanding{
 						width: 80%;
 						flex: 0 0 80%;

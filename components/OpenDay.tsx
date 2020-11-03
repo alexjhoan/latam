@@ -1,5 +1,6 @@
 import React from 'react'
 import {Row, Col, Button} from "antd";
+import Fade from 'react-reveal/Fade';
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 
 export default function OpenDay() {
@@ -26,7 +27,9 @@ export default function OpenDay() {
 							<iframe width="1090" height="613" src="https://www.youtube.com/embed/3Qp3kSpKrpM"></iframe>
 						</div>
 		      	<div className="footerVideo dNone dLgFlex dRowCenter">
-		      		<img src="/images/footerVideo.png" alt="." />
+		      		<Fade right>
+		      			<img src="/images/footerVideo.png" alt="." />
+		      		</Fade>
 		      	</div>
 					</div>
 					<div className="contact textCenter">
@@ -113,7 +116,7 @@ export default function OpenDay() {
 				.OpenDayLanding .btnContact .ant-btn img {
 			    height: 20px;
 			    transform: translateY(-2px);
-			    margin-right: 10px;
+			    margin-right: 5px;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.OpenDayLanding .btnContact{
