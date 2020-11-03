@@ -34,7 +34,7 @@ export default function OpenDay() {
 					</div>
 					<div className="contact textCenter">
 						<div className="titleContact dRowCenter">
-			      	<p><img src="/images/icons/lightning.png" alt="." />Ofertas disponibles hasta el 10 de noviembre</p>
+			      	<p><img src="/images/icons/Lightning.png" alt="." />Ofertas disponibles hasta el 10 de noviembre</p>
 						</div>
 						<p>¿Te interesa?</p>
 						<div className="btnContact dColumnCenter">
@@ -42,7 +42,7 @@ export default function OpenDay() {
 			      		<img src="/images/icons/mail.png" alt="." />
 					      Consultá por mail
 					    </Button>
-					    <Button type="primary" href="https://api.whatsapp.com/send?phone=59896207460&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
+					    <Button type="primary" href="https://api.whatsapp.com/send?phone=59897134559&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
 			      		<img src="/images/icons/whatsapp.png" alt="." />
 					      Consultá por WhatsApp
 					    </Button>
@@ -84,12 +84,13 @@ export default function OpenDay() {
 					width: 100%;
     			margin: 4vh 0;
 				}
-				.OpenDayLanding .theVideo iframe {
+				#__next .OpenDayLanding .theVideo iframe {
 					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100%;
 					height: 100%;
+					display: block!important;
 				}
 				.OpenDayLanding .titleContact img {
 				  height: 20px;

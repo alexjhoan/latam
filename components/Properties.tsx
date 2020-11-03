@@ -65,7 +65,7 @@ export default function Properties() {
 								</div>
 							</div>
 							<div className="detailsItem dColumnCenter">
-								<Button href="https://www.infocasas.com.py/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
+								<Button href="https://www.infocasas.com.uy/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
 								<div className="listDetails">
 									{
 										listUy.map((item, i) => {
@@ -89,7 +89,7 @@ export default function Properties() {
 								</div>
 							</div>
 							<div className="detailsItem dColumnCenter">
-								<Button href="https://www.infocasas.com.uy/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
+								<Button href="https://www.infocasas.com.py/evento-latam" target="_blank" type="primary">{t("Ver propiedades")}</Button>
 								<div className="listDetails">
 									{
 										listPy.map((item, i) => {

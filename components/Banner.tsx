@@ -27,7 +27,6 @@ export default function Banner() {
 	const amountChange = randomNumber(1, 5)
 	const prob = randomNumber(1, 3)
 
-
 	const pieData = {
 		labels: [
       "Argentina",
