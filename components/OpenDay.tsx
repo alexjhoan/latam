@@ -24,7 +24,7 @@ export default function OpenDay() {
 			    		<img src="/images/icons/arrowLeft.png" alt="." />
 						</div>
 						<div className="theVideo">
-							<iframe width="1090" height="613" src="https://www.youtube.com/watch?v=nsxkaLVzJEY"></iframe>
+							<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
 						</div>
 		      	<div className="footerVideo dNone dLgFlex dRowCenter">
 		      		<Fade right>
