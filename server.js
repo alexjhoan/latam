@@ -117,7 +117,7 @@ app
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-					"x-origin": "www.infocasas.com.uy",
+					"x-origin": domain,
 					authorization: token ? `Bearer ${token}` : "",
 				},
 				body: JSON.stringify({
