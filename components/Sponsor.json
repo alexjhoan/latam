@@ -11,12 +11,12 @@
 			"name": "Ventura",
 			"email": "info@ventura.com.uy",
 			"tel": "(+598) 99 202 424",
-			"ubication": "Uruguay",
+			"ubication": "Paraguay",
 			"url": ""
 		},
 		{
 			"name": "M4",
-			"email": "info@beone.com.uy",
+			"email": "galeriam4@m4.com.py",
 			"tel": "(+595) 981 229 900",
 			"ubication": "Uruguay",
 			"url": ""
@@ -25,7 +25,7 @@
 			"name": "BeOne",
 			"email": "info@beone.com.uy",
 			"tel": "(+598) 95 666 041",
-			"ubication": "Paraguay",
+			"ubication": "Uruguay",
 			"url": ""
 		},
 		{
@@ -74,7 +74,7 @@
 			"name": "Green Park",
 			"email": "admgreenpark@gmail.com",
 			"tel": "(+595) 972 750 161",
-			"ubication": "Uruguay",
+			"ubication": "Paraguay",
 			"url": ""
 		},
 		{
@@ -208,21 +208,21 @@
 			"email": "info@intelicasa.uy",
 			"tel": "(+598) 91 602 020",
 			"ubication": "Uruguay",
-			"url": "www.intelicasa.uy/"
+			"url": "www.intelicasa.uy"
 		},
 		{
 			"name": "Aleno Dalmas",
 			"email": "info@alenodalmas.com",
 			"tel": "(+598) 99 677 274",
 			"ubication": "Uruguay",
-			"url": "www.alenodalmas.com/"
+			"url": "www.alenodalmas.com"
 		},
 		{
 			"name": "4S",
 			"email": "",
 			"tel": "",
 			"ubication": "Uruguay",
-			"url": "www.4srealestate.com/"
+			"url": "www.4srealestate.com"
 		},
 		{
 			"name": "Indigo",
@@ -236,7 +236,7 @@
 			"email": "artel@internet.com.uy",
 			"tel": "(+598) 2408 5326",
 			"ubication": "Uruguay",
-			"url": "www.arteliluminacion.com/"
+			"url": "www.arteliluminacion.com"
 		}
 	]
 }

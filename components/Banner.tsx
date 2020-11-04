@@ -57,6 +57,10 @@ export default function Banner() {
 	  }
 	};
 
+	const onFinish = () => {
+		console.log("onFinished")
+	}
+
 	let counter: any;
 	if (today > init) {
 		counter = (
@@ -78,11 +82,6 @@ export default function Banner() {
 			setCountFire(countFire + amountChange)
 			setCountComment(countComment - amountChange)
 		}
-	}
-
-	const tiempo = () =>{
-		setTimeout(numero, 5000)
-		console.log("funciona")
 	}
 
   const defaultOptions = {
