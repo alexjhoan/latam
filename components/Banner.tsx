@@ -179,7 +179,7 @@ export default function Banner() {
 										</div>
 										<p className="titleCounter"><CountUp end={countComment} duration={1} /></p>
 									</div>
-									<span>personas están consultando ahora</span>
+									<span>personas están consultando</span>
 								</div>
 							</div>
 						</Col>
