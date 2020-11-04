@@ -205,7 +205,7 @@ export default function Banner() {
 			</Row>
 			<style jsx global>{`
 				.BannerLanding > .containerLanding {
-				  margin: 5vh auto;
+				  margin: 60px auto 5vh;
 				}
 				.BannerLanding {
 					background-image: url(/images/header.jpg);
@@ -380,6 +380,9 @@ export default function Banner() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}) {
+					.BannerLanding > .containerLanding {
+					  margin: 120px auto 5vh;
+					}
 					.BannerLanding .imgContainer,
 					.BannerLanding .imgContainer + .ant-col {
 						padding: 0 15px;
