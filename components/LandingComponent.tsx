@@ -25,6 +25,9 @@ export default function LandingComponent() {
 				html{
 					scroll-behavior: smooth;
 				}
+				.search-bar {
+				  display: none;
+				}
 				#openday, #properties, #talks, #sponsor, #bigdata {
 					margin-top: -100px;
 				}

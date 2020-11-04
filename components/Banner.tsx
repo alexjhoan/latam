@@ -21,7 +21,7 @@ export default function Banner() {
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
-	const deadline = Date.parse("11/10/2020");
+	const deadline = Date.parse("11/12/2020");
 	const today = Date.now();
 	const init = Date.parse("11/04/2020");
 	const amountChange = randomNumber(1, 5)
@@ -83,6 +83,8 @@ export default function Banner() {
 			setCountComment(countComment - amountChange)
 		}
 	}
+
+	{/*setInterval(numero, randomNumber(5000, 10000))*/}
 
   const defaultOptions = {
     loop: true,

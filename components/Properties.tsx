@@ -58,7 +58,9 @@ export default function Properties() {
 					<div className="containerProps">
 						<div className="itemProps dColumnCenter">
 							<div className="couterPropeties">
-								<img src="/images/uy.jpg" alt="."/>
+								<a href="https://www.infocasas.com.uy/evento-latam" target="_blank">
+									<img src="/images/uy.jpg" alt="."/>
+								</a>
 								<div className="textCounter">
 									<span>{countUpUy}</span>
 									<p className="textOfert">{t("ofertas")}</p>
@@ -82,7 +84,9 @@ export default function Properties() {
 						</div>
 						<div className="itemProps dColumnCenter">
 							<div className="couterPropeties">
-								<img src="/images/py.jpg" alt="."/>
+								<a href="https://www.infocasas.com.py/evento-latam" target="_blank">
+									<img src="/images/py.jpg" alt="."/>
+								</a>
 								<div className="textCounter">
 									<span>{countUpPy}</span>
 									<p className="textOfert">{t("ofertas")}</p>

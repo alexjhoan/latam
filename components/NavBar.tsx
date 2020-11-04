@@ -32,7 +32,7 @@ export default function NavBar() {
 	      </a>
 	    </Menu.Item>
 	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
-	    <Menu.Item key="2">
+	    {/*<Menu.Item key="2">
 	      <a href="#talks" className="navLink">
 	      	<div className="imgContainer">
 	      		<img src="/images/icons/Charlas.png" alt="." />
@@ -40,7 +40,7 @@ export default function NavBar() {
 	      	Charlas
 	      </a>
 	    </Menu.Item>
-	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>
+	    <Divider type={!screen.lg ? "horizontal" : "vertical"}/>*/}
 	    <Menu.Item key="3">
 	    	<a href="#sponsor" className="navLink">
 	    		<div className="imgContainer">
