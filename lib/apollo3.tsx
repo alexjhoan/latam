@@ -272,7 +272,7 @@ function createApolloClient(initialState = {}, token, domain) {
 			operation.setContext({
 				headers: {
 					authorization: auth ? `Bearer ${auth}` : "",
-					"x-origin": "www.infocasas.com.uy",
+					"x-origin": domain,
 				},
 			});
 
@@ -295,7 +295,7 @@ function createApolloClient(initialState = {}, token, domain) {
 			headers: {
 				...headers,
 				authorization: _token ? `Bearer ${_token}` : "",
-				"x-origin": "www.infocasas.com.uy",
+				"x-origin": _domain,
 			},
 		};
 	});
