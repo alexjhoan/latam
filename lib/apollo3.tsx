@@ -32,6 +32,7 @@ const CONFIG_QUERY = gql`
 			country_capital_id
 			country_code
 			site_name
+			main_domain
 			logo
 			information_email
 			sales_email
