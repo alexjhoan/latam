@@ -57,21 +57,16 @@ export default function Banner() {
 	  }
 	};
 
-	const onFinish = () => {
-		console.log("onFinished")
-	}
-
 	let counter: any;
-	if (today > init) {
+	if ((today > init) && (today < deadline)) {
 		counter = (
 			<Countdown
 				value={deadline}
-				onFinish={onFinish}
 				format="D : HH : mm : ss"
 			/>
 		);
 	} else {
-		counter = (<Statistic value={"7 : 00 : 00 : 00"} />);
+		counter = (<Statistic value={"0 : 00 : 00 : 00"} />);
 	}
 
 	const numero = () => {
@@ -82,9 +77,10 @@ export default function Banner() {
 			setCountFire(countFire + amountChange)
 			setCountComment(countComment - amountChange)
 		}
+		{/*console.log("corrio")*/}
 	}
-
-	{/*setInterval(numero, randomNumber(5000, 10000))*/}
+	
+	{/*setInterval(numero, 10000)*/}
 
   const defaultOptions = {
     loop: true,
