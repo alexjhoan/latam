@@ -15,7 +15,11 @@ export default function OpenDay() {
 					<div className="dColumnCenter textCenter title">
 	      		<img src="/images/openDay.png" alt="." />
 		      	<p>Mirá el video y conocé los 7 lanzamientos exclusivos con precios especiales para inversores!</p>
-		      	<p className="secondParagraph">Congelá precio y condiciones por 7 días con una seña FLASH, que podés pagar online desde Argentina y cualquier parte del mundo!</p>
+		      	{/*<p className="secondParagraph">Congelá precio y condiciones por 7 días con una seña FLASH, que podés pagar online desde Argentina y cualquier parte del mundo!</p>*/}
+		      	<div className="containerTel">
+	      			<p>Consulta al</p>
+	      			<p className="telNumber">+598 97 134 559</p>
+	      		</div>
 					</div>
 					<div className="viewVideo">
 						<div className="titleVideo dRowCenter dNone dLgFlex">
@@ -77,6 +81,21 @@ export default function OpenDay() {
 					margin-top: 20px;
 					font-size: 15px;
 					line-height: 17px;
+				}
+				.OpenDayLanding .containerTel {
+				  border: solid 2px #fff;
+				  padding: 10px;
+				  margin-top: 30px;
+				}
+				.OpenDayLanding .containerTel p {
+				  font-size: 24px;
+				  text-align: center;
+				}
+				.OpenDayLanding .containerTel p.telNumber {
+				  color: #e8690b!important;
+				  font-size: 28px!important;
+				  font-weight: 900;
+				  margin-top: 10px;
 				}
 				.OpenDayLanding .theVideo{
 					padding-top: 56.26%;
@@ -143,6 +162,12 @@ export default function OpenDay() {
 					.OpenDayLanding .btnContact .ant-btn span{
 						font-size: 16px;
 					}
+					.OpenDayLanding .containerTel p {
+					  font-size: 28px;
+					}
+					.OpenDayLanding .containerTel p.telNumber {
+					  font-size: 34px!important;
+					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.OpenDayContainer {
@@ -192,7 +217,7 @@ export default function OpenDay() {
 						grid-column-end: 2;
 						grid-row-start: 2;
 						grid-row-end: 3;
-						margin-top: 30px;
+						margin-top: 15px;
 					}
 					.OpenDayContainer .textCenter{
 						text-align: left;

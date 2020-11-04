@@ -17,16 +17,13 @@ export default function LandingComponent() {
 			<Banner />
 			<OpenDay />
 			<Properties />
-			{/*<Talks />*/}
+			<Talks />
 			<Sponsor />
 			<BigData />
 			<Footer />
 			<style jsx global>{`
 				html{
 					scroll-behavior: smooth;
-				}
-				.search-bar {
-				  display: none;
 				}
 				#openday, #properties, #talks, #sponsor, #bigdata {
 					margin-top: -100px;
@@ -56,23 +53,23 @@ export default function LandingComponent() {
 					text-align: center;
 				}
 				.dNone{
-					display: none;
+					display: none!important;
 				}
 				.dBlock{
-					display: block;
+					display: block!important;
 				}
 				.dFlex{
-					display: flex;
+					display: flex!important;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.dSmNone{
-						display: none;
+						display: none!important;
 					}
 					.dSmBlock{
-						display: block;
+						display: block!important;
 					}
 					.dSmFlex{
-						display: flex;
+						display: flex!important;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
@@ -81,24 +78,27 @@ export default function LandingComponent() {
 						flex: 0 0 90%;
 					}
 					.dMdNone{
-						display: none;
+						display: none!important;
 					}
 					.dMdBlock{
-						display: block;
+						display: block!important;
+					}
+					.dMdInlineBlock{
+						display: inline-block!important;
 					}
 					.dMdFlex{
-						display: flex;
+						display: flex!important;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
 					.dLgNone{
-						display: none;
+						display: none!important;
 					}
 					.dLgBlock{
-						display: block;
+						display: block!important;
 					}
 					.dLgFlex{
-						display: flex;
+						display: flex!important;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.xl}){

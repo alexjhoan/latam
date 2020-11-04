@@ -22,7 +22,15 @@ export default function Sponsor() {
 		data = participants
 	}
 
+	if (true) {} else {}
+
 	const cardParticipants = data.map((item, i) => {
+		let url
+		if (item.url === "") {
+			url = ""
+		} else {
+			url = "Ver Empresa"
+		}
 		return(
 			<div className="card" key={i} >
 				<div className="logo">
@@ -32,7 +40,7 @@ export default function Sponsor() {
 					<p className="name">{item.name}</p>
 					<p>{item.email}</p>
 					<p>{item.tel}</p>
-					<a href={`https://${item.url}`} target="_blank" className='itemLink'>{item.url}</a>
+					<a href={item.url} target="_blank" className='itemLink'>{url}</a>
 					<div className="ubication dRowCenter">
 						<img src={`/images/flags/${item.ubication}.png`} alt="" />
 						<p>{t(item.ubication)}</p>
@@ -95,7 +103,8 @@ export default function Sponsor() {
 				  font-weight: 900;
 				}
 				.SponsorLanding .card .itemLink{
-					color: #3A4145;
+					color: #ff6610;
+    			text-decoration: underline;
 				}
 				.SponsorLanding .card .itemLink:hover{
 					color: #3A4145;

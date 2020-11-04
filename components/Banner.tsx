@@ -69,18 +69,26 @@ export default function Banner() {
 		counter = (<Statistic value={"0 : 00 : 00 : 00"} />);
 	}
 
-	const numero = () => {
+	const newNumber = () => {
 		if (prob === 1) {
-			setCountFire(countFire - amountChange)
-			setCountComment(countComment - amountChange)
+			if ((countFire < 1000) && (countFire > 324)) {
+				setCountFire(countFire - amountChange)
+			}
+			if ((countComment < 1000) && (countComment > 101)) {
+				setCountComment(countComment - amountChange)
+			}
 		} else {
-			setCountFire(countFire + amountChange)
-			setCountComment(countComment - amountChange)
+			if ((countFire < 1000) && (countFire > 324)) {
+				setCountFire(countFire + amountChange)
+			}
+			if ((countComment < 1000) && (countComment > 101)) {
+				setCountComment(countComment + amountChange)
+			}
 		}
-		{/*console.log("corrio")*/}
 	}
 	
-	{/*setInterval(numero, 10000)*/}
+	{/*setInterval(newNumber, randomNumber(30000, 90000))*/}
+	// este es el que deberia funcionar pero haces cosas extrañas
 
   const defaultOptions = {
     loop: true,
@@ -169,7 +177,7 @@ export default function Banner() {
 										<p className="titleCounter"><CountUp end={countFire} duration={1} /></p>
 									</div>
 									<span>
-										inversores nos han visitado en las últimas 6 horas
+										inversores nos han visitado
 									</span>
 								</div>
 								<div className="innerText">

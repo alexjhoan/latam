@@ -13,22 +13,7 @@ const dataVideo = [
 	{
 		title: 'Bienvenida LatAm Invierte',
 		subTitle: '¿Cómo funciona?',
-		idVideo: '3Qp3kSpKrpM'
-	},
-	{
-		title: 'Asesoría Fiscal con KMPG',
-		subTitle: 'Estreno 05/11 - 10:30 am',
-		idVideo: '3Qp3kSpKrpM'
-	},
-	{
-		title: 'Invertir en la Región',
-		subTitle: 'Estreno 05/11 - 10:30 am',
-		idVideo: '3Qp3kSpKrpM'
-	},
-	{
-		title: 'Invertir en la Región',
-		subTitle: 'Estreno 05/11 - 10:30 am',
-		idVideo: '3Qp3kSpKrpM'
+		idVideo: '7Ls7pAoaQGQ'
 	}
 ]
 
@@ -50,7 +35,7 @@ export default function Talks() {
 
   const paramsSwiper = {
     spaceBetween: 10,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -115,12 +100,13 @@ export default function Talks() {
 					width: 100%;
 					margin-bottom: 15px;
 				}
-				.TalksLanding .itemVideo iframe {
+				#__next .TalksLanding .itemVideo iframe {
 					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100%;
 					height: 100%;
+					display: block!important;
 				}
 				.TalksLanding .itemVideo ~ p {
 				  line-height: 22px;
