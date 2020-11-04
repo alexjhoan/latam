@@ -15,7 +15,7 @@ const custom_env = {};
 
 if (process.env.NODE_ENV === "production") {
 	custom_env.graphQL_uri = "https://graph.infocasas.com.uy/graphql";
-	custom_env.memcached_uri = "memcached-php-prod2.kvtekg.cfg.usw2.cache.amazonaws.com:11211";
+	custom_env.memcached_uri = "";
 	custom_env.assetPrefix = "https://cdn2.infocasas.com.uy/frontend";
 	custom_env.distDir = "build-production";
 	custom_env.sentryDNS = "https://aebadfdd38f84af784967d42f1ca072b@sentry.io/2679673";
