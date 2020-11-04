@@ -7,8 +7,12 @@ import { useFacebookPixel } from "../shared-components/GlobalHooks/web/FacebookP
 import { useGoogleAnalytics } from "../shared-components/GlobalHooks/web/GoogleAnalytics.hook";
 import { useGoogleTagManager } from "../shared-components/GlobalHooks/web/GoogleTagManager.hook";
 import { useOneSignal } from "../shared-components/GlobalHooks/web/OneSignal.hook";
-import Header from "../shared-components/ViewFragments/Header/web";
 import LandingComponent from "../components/LandingComponent"
+
+import dynamic from "next/dynamic";
+const LandingHeader = dynamic(() => import("../components/LandingHeader").then((mod) => mod.LandingHeader), {
+  ssr: false,
+});
 
 // Home Page
 const Home = () => {
@@ -22,7 +26,10 @@ const Home = () => {
 		<React.Fragment>
 			{/* Meta Tags */}
 			<MetaTags />
+			{/*
 			<Header />
+			*/}
+			<LandingHeader />
 			<LandingComponent />
 		</React.Fragment>
 	);
