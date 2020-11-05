@@ -2,28 +2,28 @@
 	"participants":[
 		{
 			"name": "Continents",
-			"email": "info@male.com.py",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
-			"url": ""
+			"url": "https://www.infocasas.com.py/proyectos/male"
 		},
 		{
 			"name": "Ventura",
-			"email": "info@ventura.com.uy",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
 			"url": "https://www.infocasas.com.uy/proyectos/ventura-central"
 		},
 		{
 			"name": "M4",
-			"email": "galeriam4@m4.com.py",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/galeria-m4"
 		},
 		{
 			"name": "BeOne",
-			"email": "info@beone.com.uy",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
 			"url": "https://www.infocasas.com.uy/proyectos/beone-bernardina"
@@ -37,10 +37,10 @@
 		},
 		{
 			"name": "Vitrium",
-			"email": "info@vitriumcapital.com",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
-			"url": "https://www.infocasas.com.uy/proyectos/ventura-central"
+			"url": "https://www.infocasas.com.uy/proyectos/01-libertador"
 		},
 		{
 			"name": "Petrus",
@@ -58,14 +58,14 @@
 		},
 		{
 			"name": "Cipia",
-			"email": "contacto@cipia.com.uy",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
 			"url": "https://www.infocasas.com.uy/proyectos/cordon-design"
 		},
 		{
 			"name": "BDP",
-			"email": "info@bdp.com.uy",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
 			"url": "https://www.infocasas.com.uy/proyectos/edificio-principia"
@@ -100,7 +100,7 @@
 		},
 		{
 			"name": "Pointer",
-			"email": "hola@pointer.uy",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Uruguay",
 			"url": ""
@@ -114,14 +114,14 @@
 		},
 		{
 			"name": "Avanza",
-			"email": "ventas@avanza.com.py",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/in-molas"
 		},
 		{
 			"name": "Zuba",
-			"email": "zuba.inversiones@gmail.com",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/zuba-iv"
@@ -135,7 +135,7 @@
 		},
 		{
 			"name": "Eydisa",
-			"email": "contactos@eydisa.com.py",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": ""
@@ -149,7 +149,7 @@
 		},
 		{
 			"name": "Miaterra",
-			"email": "comercial@miaterra.com",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/balcones"
@@ -163,7 +163,7 @@
 		},
 		{
 			"name": "GAO",
-			"email": "info@gao.com.py",
+			"email": "",
 			"tel": "(+598) 97 134 559",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/tavamay"
@@ -180,21 +180,21 @@
 			"email": "montevideo@engelvoelkers.com",
 			"tel": "(+598) 2600 2503",
 			"ubication": "Uruguay",
-			"url": ""
+			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/62885-engel-&-v%E3%B6lkers?"
 		},
 		{
 			"name": "Punta Ballena",
 			"email": "ventas@puntaballenainmobiliaria.com",
 			"tel": "(+598) 94 972 631",
 			"ubication": "Uruguay",
-			"url": ""
+			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/148805-punta-ballena-inmobiliaria"
 		},
 		{
 			"name": "Paiva Park",
 			"email": "info@paivapark.com.uy",
 			"tel": "(+598) 2711 7266",
 			"ubication": "Uruguay",
-			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/62885-engel-&-v%E3%B6lkers?"
+			"url": "https://www.infocasas.com.uy/proyectos/paiva-park"
 		},
 		{
 			"name": "BBVA",
