@@ -19,6 +19,11 @@ const dataVideo = [
 		title: 'Bienvenida LatAm Invierte',
 		subTitle: '¿Cómo funciona?',
 		idVideo: '7tAzHju6K2Y'
+	},
+	{
+		title: 'Bienvenida LatAm Invierte',
+		subTitle: '¿Cómo funciona?',
+		idVideo: 'iZzlcrVRPxo'
 	}
 ]
 
