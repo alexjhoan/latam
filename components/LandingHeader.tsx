@@ -4,8 +4,8 @@ import {ArrowLeftOutlined} from "@ant-design/icons";
 export const LandingHeader = () => {
   const genHomeLink = () =>
     window.location.hostname == "latam.infocasas.com.py"
-      ? "https://www.infocasas.com.py?h"
-      : "https://www.infocasas.com.uy?h";
+      ? "https://www.infocasas.com.py?h=1"
+      : "https://www.infocasas.com.uy?h=1";
   return (
     <>
       <header>
