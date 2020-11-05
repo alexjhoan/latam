@@ -24,11 +24,7 @@ const Home = () => {
 
 	return (
 		<React.Fragment>
-			{/* Meta Tags */}
 			<MetaTags />
-			{/*
-			<Header />
-			*/}
 			<LandingHeader />
 			<LandingComponent />
 		</React.Fragment>

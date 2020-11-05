@@ -9,23 +9,17 @@ import * as animationReloj from './animations/reloj/data.json'
 import * as animationLatAm from './animations/logo-latam/data.json'
 import * as animationFire from './animations/fire/data.json'
 import * as animationComments from './animations/comments/data.json'
+import {RandomCounter} from './RandomCounter'
 
-const randomNumber = (min:number, max:number) => {
-	let num = Math.round((Math.random() * (max - min)) + min);
-	return num
-}
 
 export default function Banner() {
-	const [countFire, setCountFire] = React.useState(randomNumber(325, 632))
-	const [countComment, setCountComment] = React.useState(randomNumber(102, 215))
+
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
 	const deadline = Date.parse("11/12/2020");
 	const today = Date.now();
 	const init = Date.parse("11/04/2020");
-	const amountChange = randomNumber(1, 5)
-	const prob = randomNumber(1, 3)
 
 	const pieData = {
 		labels: [
@@ -69,26 +63,6 @@ export default function Banner() {
 		counter = (<Statistic value={"0 : 00 : 00 : 00"} />);
 	}
 
-	const newNumber = () => {
-		if (prob === 1) {
-			if ((countFire < 1000) && (countFire > 324)) {
-				setCountFire(countFire - amountChange)
-			}
-			if ((countComment < 1000) && (countComment > 101)) {
-				setCountComment(countComment - amountChange)
-			}
-		} else {
-			if ((countFire < 1000) && (countFire > 324)) {
-				setCountFire(countFire + amountChange)
-			}
-			if ((countComment < 1000) && (countComment > 101)) {
-				setCountComment(countComment + amountChange)
-			}
-		}
-	}
-	
-	{/*setInterval(newNumber, randomNumber(30000, 90000))*/}
-	// este es el que deberia funcionar pero haces cosas extrañas
 
   const defaultOptions = {
     loop: true,
@@ -174,7 +148,9 @@ export default function Banner() {
 										<div className="animationContent">
 											<Lottie options={fireOptions} height={25} width={30}/>
 										</div>
-										<p className="titleCounter"><CountUp end={countFire} duration={1} /></p>
+										<p className="titleCounter">
+											<RandomCounter max={632} min={325}/>
+										</p>
 									</div>
 									<span>
 										inversores nos han visitado
@@ -185,7 +161,9 @@ export default function Banner() {
 										<div className="animationContent">
 											<Lottie options={CommentsOptions} height={25} width={30}/>
 										</div>
-										<p className="titleCounter"><CountUp end={countComment} duration={1} /></p>
+										<p className="titleCounter">
+											<RandomCounter max={215} min={102}/>
+										</p>
 									</div>
 									<span>personas están consultando</span>
 								</div>
