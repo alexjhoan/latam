@@ -24,6 +24,11 @@ const dataVideo = [
 		title: 'Bienvenida LatAm Invierte',
 		subTitle: '¿Cómo funciona?',
 		idVideo: 'iZzlcrVRPxo'
+	},
+	{
+		title: 'Bienvenida LatAm Invierte',
+		subTitle: '¿Cómo funciona?',
+		idVideo: '-DRy5zD4T2o'
 	}
 ]
 
@@ -45,7 +50,7 @@ export default function Talks() {
 
   const paramsSwiper = {
     spaceBetween: 10,
-    loop: false,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
