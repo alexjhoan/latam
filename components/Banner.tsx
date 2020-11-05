@@ -153,7 +153,7 @@ export default function Banner() {
 										</p>
 									</div>
 									<span>
-										inversores nos han visitado
+										inversores nos están visitado
 									</span>
 								</div>
 								<div className="innerText">
