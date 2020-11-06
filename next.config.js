@@ -18,11 +18,11 @@ if (process.env.NODE_ENV === "production") {
 	custom_env.memcached_uri = "";
 	custom_env.assetPrefix = "https://cdn2.infocasas.com.uy/frontend";
 	custom_env.distDir = "build-production";
-	custom_env.sentryDNS = "https://aebadfdd38f84af784967d42f1ca072b@sentry.io/2679673";
+	custom_env.sentryDNS = "";
 	custom_env.googleClientID =
 		"294615345597-9ghmg15vcsfar1b1sqvcqphukull84gn.apps.googleusercontent.com";
 	custom_env.facebookAppID = "1402860790042682";
-	custom_env.logrocketID = "lkvvhi/infocasas";
+	custom_env.logrocketID = "";
 	custom_env.googleMapsApiKey = "AIzaSyDBA9FLlSyCGsbvPX-IGZm5BdAFnM04zUw";
 } else if (process.env.NODE_ENV === "beta") {
 	//custom_env.graphQL_uri = "https://graph.infocasas.com.uy/graphql";
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 	custom_env.memcached_uri = "memcached-php-prod2.kvtekg.cfg.usw2.cache.amazonaws.com:11211";
 	custom_env.assetPrefix = "https://cdn2.infocasas.com.uy/frontend-beta";
 	custom_env.distDir = "build-beta";
-	custom_env.sentryDNS = "https://aebadfdd38f84af784967d42f1ca072b@sentry.io/2679673";
+	custom_env.sentryDNS = "";
 	custom_env.googleClientID =
 		"294615345597-9ghmg15vcsfar1b1sqvcqphukull84gn.apps.googleusercontent.com";
 	custom_env.facebookAppID = "1402860790042682";
