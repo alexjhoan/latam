@@ -54,6 +54,11 @@ export default function Sponsor() {
 		<React.Fragment>
 			<Row id="sponsor" className="SponsorLanding">
 				<Col xs={24} className="containerLanding">
+					<div className="banner">
+						<a href="https://www.bbva.com.uy/Inicio/prestamos-hipotecarios?destacadoWI">
+							<img src="/images/bbva_gif.gif" alt="bbva" />
+						</a>
+					</div>
 					<h1 className="title">{t("Directorio de Empresas Participantes")}</h1>
 						<div className="participants">
 						 {cardParticipants}
@@ -133,6 +138,12 @@ export default function Sponsor() {
 				.SponsorLanding .containerLogos{
 					margin: 0 -15px;
 				}
+				.SponsorLanding .banner{
+					margin: 0 -15px;
+				}
+				.SponsorLanding .banner img{
+					width: 100%;
+				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.SponsorLanding h1.title {
 						font-size: 22px;
@@ -156,6 +167,9 @@ export default function Sponsor() {
 					  grid-template-columns: 1fr 1fr;
 					}
 					.SponsorLanding .containerLogos{
+						margin: 0;
+					}
+					.SponsorLanding .banner{
 						margin: 0;
 					}
 				}
