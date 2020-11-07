@@ -2,38 +2,48 @@ import React from 'react'
 import {Row, Col} from "antd";
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
-import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { SwiperSlide } from 'swiper/react'
 import Swiper from 'react-id-swiper'
 import 'swiper/swiper-bundle.min.css'
 
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
+SwiperCore.use([Navigation, Autoplay]);
 
 const dataVideo = [
 	{
-		title: 'Bienvenida LatAm Invierte',
-		subTitle: '¿Cómo funciona?',
-		idVideo: '7Ls7pAoaQGQ'
-	},
-	{
-		title: 'Bienvenida LatAm Invierte',
-		subTitle: '¿Cómo funciona?',
-		idVideo: '7tAzHju6K2Y'
-	},
-	{
-		title: 'Bienvenida LatAm Invierte',
+		title: 'Altius Group - Nostrum Malvín',
 		subTitle: '¿Cómo funciona?',
 		idVideo: 'iZzlcrVRPxo'
 	},
 	{
-		title: 'Bienvenida LatAm Invierte',
+		title: 'Altius Group - More Atlántico',
+		subTitle: '¿Cómo funciona?',
+		idVideo: 'QmueS_NTYX0'
+	},
+	{
+		title: 'Fortaleza',
+		subTitle: '¿Cómo funciona?',
+		idVideo: '7Ls7pAoaQGQ'
+	},
+	{
+		title: '4S',
+		subTitle: '¿Cómo funciona?',
+		idVideo: '7tAzHju6K2Y'
+	},
+	{
+		title: 'Aleno Dalmas',
 		subTitle: '¿Cómo funciona?',
 		idVideo: '-DRy5zD4T2o'
 	},
 	{
-		title: 'Bienvenida LatAm Invierte',
+		title: 'Estudio Fischer',
 		subTitle: '¿Cómo funciona?',
-		idVideo: 'QmueS_NTYX0'
+		idVideo: 'gnWrijqysQk'
+	},
+	{
+		title: 'STAY REAL TV', // NOTA: este siempre va de ultimo
+		subTitle: '¿Cómo funciona?',
+		idVideo: 'YkQPntfgWmg'
 	}
 ]
 
@@ -54,15 +64,14 @@ export default function Talks() {
   })
 
   const paramsSwiper = {
-    spaceBetween: 10,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true
+    },
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
     },
     breakpoints: {
       992: {
@@ -88,7 +97,7 @@ export default function Talks() {
 						<h1 className="titleTalks">{t('Charlas y presentaciones de proyectos')}</h1>
 						<Swiper {...paramsSwiper}>
 							{dataVideoImp}
-						</Swiper>						
+						</Swiper>	
 					</div>
 				</Col>
 			</Row>

@@ -1,6 +1,13 @@
 {
 	"participants":[
 		{
+			"name": "Ventus",
+			"email": "",
+			"tel": "(+598) 97 134 559",
+			"ubication": "Uruguay",
+			"url": "https://www.infocasas.com.uy/proyectos/florencia"
+		},
+		{
 			"name": "Continents",
 			"email": "",
 			"tel": "(+598) 97 134 559",
@@ -50,6 +57,13 @@
 			"url": "https://www.infocasas.com.py/proyectos/san-blas"
 		},
 		{
+			"name": "Altius",
+			"email": "info@altius.com.uy",
+			"tel": "(+598) 0800 8911",
+			"ubication": "Uruguay",
+			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/59230-altius"
+		},
+		{
 			"name": "Sures",
 			"email": "info@sures.com.uy",
 			"tel": "(+598) 2710 6570",
@@ -76,13 +90,6 @@
 			"tel": "(+595) 972 750 161",
 			"ubication": "Paraguay",
 			"url": "https://www.infocasas.com.py/proyectos/green-park"
-		},
-		{
-			"name": "Altius",
-			"email": "info@altius.com.uy",
-			"tel": "(+598) 0800 8911",
-			"ubication": "Uruguay",
-			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/59230-altius"
 		},
 		{
 			"name": "Kosak",
@@ -188,13 +195,6 @@
 			"tel": "(+598) 94 972 631",
 			"ubication": "Uruguay",
 			"url": "https://www.infocasas.com.uy/inmobiliarias/perfil/148805-punta-ballena-inmobiliaria"
-		},
-		{
-			"name": "Ventus",
-			"email": "",
-			"tel": "(+598) 97 134 559",
-			"ubication": "Uruguay",
-			"url": "https://www.infocasas.com.uy/proyectos/florencia"
 		},
 		{
 			"name": "Paiva Park",

@@ -54,7 +54,7 @@ export default function Sponsor() {
 		<React.Fragment>
 			<Row id="sponsor" className="SponsorLanding">
 				<Col xs={24} className="containerLanding">
-					<div className="banner">
+					<div className="banner dRowCenter">
 						<a href="https://www.bbva.com.uy/Inicio/prestamos-hipotecarios?destacadoWI">
 							<img src="/images/bbva_gif.gif" alt="bbva" />
 						</a>
@@ -143,6 +143,7 @@ export default function Sponsor() {
 				}
 				.SponsorLanding .banner img{
 					width: 100%;
+					max-width: 728px;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.SponsorLanding h1.title {
