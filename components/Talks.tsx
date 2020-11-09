@@ -46,6 +46,11 @@ const dataVideo = [
 		idVideo: 'msh88As_bwU'
 	},
 	{
+		title: 'Viasono',
+		subTitle: '¿Cómo funciona?',
+		idVideo: 'OnWGs1hDPTs'
+	},
+	{
 		title: 'STAY REAL TV', // NOTA: este siempre va de ultimo
 		subTitle: '¿Cómo funciona?',
 		idVideo: 'YkQPntfgWmg'
