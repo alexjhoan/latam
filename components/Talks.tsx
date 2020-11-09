@@ -41,6 +41,11 @@ const dataVideo = [
 		idVideo: 'gnWrijqysQk'
 	},
 	{
+		title: 'Intelicasa',
+		subTitle: '¿Cómo funciona?',
+		idVideo: 'msh88As_bwU'
+	},
+	{
 		title: 'STAY REAL TV', // NOTA: este siempre va de ultimo
 		subTitle: '¿Cómo funciona?',
 		idVideo: 'YkQPntfgWmg'
