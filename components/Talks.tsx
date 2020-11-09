@@ -53,7 +53,7 @@ const dataVideo = [
 	{
 		title: 'STAY REAL TV', // NOTA: este siempre va de ultimo
 		subTitle: '¿Cómo funciona?',
-		idVideo: 'YkQPntfgWmg'
+		idVideo: 'B2JSBLomFn0'
 	}
 ]
 
