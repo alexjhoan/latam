@@ -33,6 +33,11 @@ export default function BigData() {
 						</div>
 					</div>
 				</Col>
+				<div className="banner dRowCenter">
+					<a href="https://www.elobservador.com.uy/suscripcion">
+						<img src="/images/EO.gif" alt="EO" />
+					</a>
+				</div>
 			</Row>
 			<style jsx global>{`
 				.BigDataLanding .containerLanding {
@@ -74,6 +79,15 @@ export default function BigData() {
 				.BigDataLanding .boxImg img {
 				  max-width: 100%;
 				  margin-bottom: 3vh;
+				}
+				.BigDataLanding .banner{
+					margin: 30px 0;
+					width: 100%;
+				}
+				.BigDataLanding .banner img{
+					width: 100%;
+					max-width: 728px;
+					width: 100%;
 				}
 				@media (min-width: ${theme.breakPoints.sm}){
 					.BigDataLanding h1.title, .BigDataLanding .boxImg p {
