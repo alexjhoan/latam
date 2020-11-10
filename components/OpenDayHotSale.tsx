@@ -134,9 +134,6 @@ export default function OpenDay() {
 				  height: 20px;
 				  margin-right: 5px;
 				}
-				.OpenDayLanding .contact {
-					margin-top: 3vh;
-				}
 				.OpenDayLanding .contact > p {
 				  font-weight: 400;
 				  margin-top: 10px;
@@ -203,6 +200,9 @@ export default function OpenDay() {
 					}
 					.OpenDayLanding .btnContact .ant-btn span{
 						font-size: 16px;
+					}
+					.OpenDayLanding .contact {
+						margin-top: 20px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
