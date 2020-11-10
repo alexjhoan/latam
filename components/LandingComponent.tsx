@@ -3,6 +3,7 @@ import { useTheme } from "../shared-components/Styles/ThemeHook";
 import NavBar from "./NavBar"
 import Banner from "./Banner"
 import OpenDay from "./OpenDay"
+import OpenDayHotSale from "./OpenDayHotSale"
 import Talks from "./Talks"
 import Properties from "./Properties"
 import Sponsor from "./Sponsor"
@@ -15,7 +16,8 @@ export default function LandingComponent() {
 		<React.Fragment>
 			<NavBar />
 			<Banner />
-			<OpenDay />
+			{/*<OpenDay />*/}
+			<OpenDayHotSale />
 			<Properties />
 			<Talks />
 			<Sponsor />
