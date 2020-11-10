@@ -65,7 +65,7 @@ export default function Talks() {
     return(
       <SwiperSlide key={i}>
         <div className="itemVideo">
-					<iframe src={`https://www.youtube.com/embed/${a.idVideo}`}></iframe>
+					<iframe rel="0" src={`https://www.youtube.com/embed/${a.idVideo}`}></iframe>
 				</div>
 				{/*<p>{a.title}</p>
 				<p>{a.subTitle}</p>*/}

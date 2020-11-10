@@ -19,11 +19,11 @@ export default function OpenDay() {
 							</div>
 							<div className="titleVideo dRowCenter">
 				    		<img src="/images/icons/arrowRight.png" alt="." />
-								<p>Ofertas de ultimo momento</p>
+								<p>Ofertas de último momento</p>
 				    		<img src="/images/icons/arrowLeft.png" alt="." />
 							</div>
 							<div className="theVideo">
-								<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
+								<iframe width="1090" height="613" rel="0" src="https://www.youtube.com/embed/uiMagm1Ircs"></iframe>
 							</div>
 						</Col>
 						<Col xs={24} className="viewVideo dColumnCenter">
@@ -36,7 +36,7 @@ export default function OpenDay() {
 				    		<img src="/images/icons/arrowLeft.png" alt="." />
 							</div>
 							<div className="theVideo">
-								<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
+								<iframe width="1090" height="613" rel="0" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
 							</div>
 						</Col>
 					</Row>

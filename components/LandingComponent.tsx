@@ -16,7 +16,6 @@ export default function LandingComponent() {
 		<React.Fragment>
 			<NavBar />
 			<Banner />
-			{/*<OpenDay />*/}
 			<OpenDayHotSale />
 			<Properties />
 			<Talks />
