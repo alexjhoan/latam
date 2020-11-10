@@ -12,47 +12,42 @@ SwiperCore.use([Navigation, Autoplay]);
 const dataVideo = [
 	{
 		title: 'Altius Group - Nostrum Malvín',
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'iZzlcrVRPxo'
 	},
 	{
 		title: 'Altius Group - More Atlántico',
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'QmueS_NTYX0'
 	},
 	{
 		title: 'Fortaleza',
-		subTitle: '¿Cómo funciona?',
 		idVideo: '7Ls7pAoaQGQ'
 	},
 	{
 		title: '4S',
-		subTitle: '¿Cómo funciona?',
 		idVideo: '7tAzHju6K2Y'
 	},
 	{
 		title: 'Aleno Dalmas',
-		subTitle: '¿Cómo funciona?',
 		idVideo: '-DRy5zD4T2o'
 	},
 	{
 		title: 'Estudio Fischer',
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'gnWrijqysQk'
 	},
 	{
 		title: 'Intelicasa',
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'msh88As_bwU'
 	},
 	{
 		title: 'Viasono',
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'OnWGs1hDPTs'
 	},
 	{
+		title: 'Paiva Park',
+		idVideo: 'x1-we5-2LhY'
+	},
+	{
 		title: 'STAY REAL TV', // NOTA: este siempre va de ultimo
-		subTitle: '¿Cómo funciona?',
 		idVideo: 'B2JSBLomFn0'
 	}
 ]
@@ -67,8 +62,7 @@ export default function Talks() {
         <div className="itemVideo">
 					<iframe rel="0" src={`https://www.youtube.com/embed/${a.idVideo}`}></iframe>
 				</div>
-				{/*<p>{a.title}</p>
-				<p>{a.subTitle}</p>*/}
+				{/*<p>{a.title}</p>*/}
       </SwiperSlide>
     )
   })
