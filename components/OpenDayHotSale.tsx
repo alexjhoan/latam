@@ -23,7 +23,7 @@ export default function OpenDay() {
 				    		<img src="/images/icons/arrowLeft.png" alt="." />
 							</div>
 							<div className="theVideo">
-								<iframe width="1090" height="613" rel="0" src="https://www.youtube.com/embed/uiMagm1Ircs"></iframe>
+								<iframe width="1090" height="613" rel="0" src="https://www.youtube.com/embed/uiMagm1lRcs"></iframe>
 							</div>
 						</Col>
 						<Col xs={24} className="viewVideo dColumnCenter">
