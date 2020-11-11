@@ -111,7 +111,7 @@ export default function Banner() {
 						</Col>
 						<Col xs={24} md={12}>
 							<Fade right>
-								<p className="titleDate"><span>Del 4 al 10 de noviembre</span></p>
+								<p className="titleDate"><span>Del 4 al 12 de noviembre</span></p>
 								<p className="subTitle">
 									Ofertas exclusivas y oportunidades de inversión en Uruguay y
 									Paraguay por tiempo limitado
