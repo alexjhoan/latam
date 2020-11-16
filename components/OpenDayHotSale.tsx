@@ -43,7 +43,7 @@ export default function OpenDay() {
 					<Row>
 						<Col xs={24} className="contact dColumnCenter">
 							<div className="titleContact dRowCenter">
-				      	<p><img src="/images/icons/Lightning.png" alt="." />Ofertas disponibles hasta el 12 de noviembre</p>
+				      	<p><img src="/images/icons/Lightning.png" alt="." />Ofertas disponibles hasta el 21 de noviembre</p>
 							</div>
 							<p>¿Te interesa?</p>
 							<div className="btnContact dColumnCenter">

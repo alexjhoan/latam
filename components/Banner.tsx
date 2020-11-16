@@ -11,13 +11,12 @@ import * as animationFire from './animations/fire/data.json'
 import * as animationComments from './animations/comments/data.json'
 import {RandomCounter} from './RandomCounter'
 
-
 export default function Banner() {
 
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
-	const deadline = Date.parse("11/13/2020");
+	const deadline = Date.parse("11/21/2020");
 	const today = Date.now();
 	const init = Date.parse("11/04/2020");
 
@@ -62,7 +61,6 @@ export default function Banner() {
 	} else {
 		counter = (<Statistic value={"0 : 00 : 00 : 00"} />);
 	}
-
 
   const defaultOptions = {
     loop: true,
@@ -111,7 +109,7 @@ export default function Banner() {
 						</Col>
 						<Col xs={24} md={12}>
 							<Fade right>
-								<p className="titleDate"><span>Del 4 al 12 de noviembre</span></p>
+								<p className="titleDate"><span>Del 4 al 21 de noviembre</span></p>
 								<p className="subTitle">
 									Ofertas exclusivas y oportunidades de inversión en Uruguay y
 									Paraguay por tiempo limitado
