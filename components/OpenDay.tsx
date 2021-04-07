@@ -9,59 +9,36 @@ export default function OpenDay() {
 	return (
 		<React.Fragment>
 			<Row id="openday" className="OpenDayLanding">
-		    <img src="/images/icons/lineLeft.png" alt="." className="dNone lineLeft"/>
-		    <img src="/images/icons/lineRight.png" alt="." className="dNone lineRight"/>
 				<Col xs={24} className="containerLanding OpenDayContainer">
-					<div className="dColumnCenter textCenter title">
+					<div className="dColumnCenter title">
 	      		<img src="/images/openDay.png" alt="." />
-		      	<p>Mirá el video y conocé los 7 lanzamientos exclusivos con precios especiales para inversores!</p>
-		      	{/*<p className="secondParagraph">Congelá precio y condiciones por 7 días con una seña FLASH, que podés pagar online desde Argentina y cualquier parte del mundo!</p>*/}
-		      	<div className="containerTel">
-	      			<p>Consulta al</p>
-	      			<p className="telNumber">+598 97 134 559</p>
-	      		</div>
 					</div>
 					<div className="viewVideo">
-						<div className="titleVideo dRowCenter dNone dLgFlex">
-			    		<img src="/images/icons/arrowRight.png" alt="." />
-							<p>Precios 10% por debajo del mercado</p>
-			    		<img src="/images/icons/arrowLeft.png" alt="." />
+						<div className="titleVideo">
+							<p className='title'>Reviví la apertura en vivo de LatAm Invierte</p>
+							<p>con siete proyectos con ofertas limitadas presentados por sus desarrolladores. </p>
 						</div>
+						<p>Un lanzamiento imperdible en Asunción, 4 proyectos con descuentos en Montevideo y un proyecto con descuento en Punta del Este.</p>
 						<div className="theVideo">
 							<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
 						</div>
-		      	<div className="footerVideo dNone dLgFlex dRowCenter">
-		      		<Fade right>
-		      			<img src="/images/footerVideo.png" alt="." />
-		      		</Fade>
-		      	</div>
 					</div>
-					<div className="contact textCenter">
-						<div className="titleContact dRowCenter">
-			      	<p><img src="/images/icons/Lightning.png" alt="." />Ofertas disponibles hasta el 10 de noviembre</p>
-						</div>
-						<p>¿Te interesa?</p>
-						<div className="btnContact dColumnCenter">
-							<Button type="primary" href="https://www.infocasas.com.uy/proyectos/form/latam-invierte/amp2" target="_blank">
-			      		<img src="/images/icons/mail.png" alt="." />
-					      Consultá por mail
-					    </Button>
-					    <Button type="primary" href="https://api.whatsapp.com/send?phone=59897134559&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
-			      		<img src="/images/icons/whatsapp.png" alt="." />
-					      Consultá por WhatsApp
-					    </Button>
-						</div>
+					<div className="contact">
+					<img src="/images/flash.png" alt="." />
+						<Button type="primary" href="https://api.whatsapp.com/send?phone=59897134559&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
+							<img src="/images/icons/whatsapp.png" alt="." className='iconWhatsapp'/>
+							Consultá por WhatsApp
+						</Button>
 					</div>
 				</Col>
 			</Row>
 			<style jsx global>{`
 				.OpenDayLanding{
-			    background: #3A4145;
+			    background: #efefef;
     			position: relative;
     			z-index: 0;
 				}
 				.OpenDayLanding p, .OpenDayLanding span{
-			    color: #fff;
 			    margin: 0;
 					font-weight: 900;
 					font-size: 18px;
@@ -75,6 +52,7 @@ export default function OpenDay() {
 				.OpenDayLanding .title img{
 					max-width: 50%;
     			margin-bottom: 3vh;
+					max-height: 170px;
 				}
 				.OpenDayLanding .secondParagraph{
 					font-weight: 400;
@@ -97,6 +75,21 @@ export default function OpenDay() {
 				  font-weight: 900;
 				  margin-top: 10px;
 				}
+				.OpenDayLanding .viewVideo p {
+					text-align: center;
+					line-height: 1.3;
+					font-size: 16px;
+					font-weight: 900;
+				}
+				.OpenDayLanding .titleVideo {
+					margin-bottom: 30px;
+				}
+				.OpenDayLanding .viewVideo p.title {
+					font-size: 22px;
+				}
+				.OpenDayLanding .titleVideo p:not(.title) {
+					font-weight: 500;
+				}
 				.OpenDayLanding .theVideo{
 					padding-top: 56.26%;
 					position: relative;
@@ -115,25 +108,33 @@ export default function OpenDay() {
 				  height: 20px;
 				  margin-right: 5px;
 				}
+				.OpenDayLanding .contact {
+				  position: relative;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+				}
+				.OpenDayLanding .contact img {
+				  max-width: 100%;
+					max-height: 350px;
+				}
 				.OpenDayLanding .contact > p {
 				  font-weight: 400;
 				  margin-top: 10px;
 				}
-				.OpenDayLanding .btnContact .ant-btn{
+				.OpenDayLanding .contact .ant-btn{
 					margin: 10px 0 5px;
-					background: #1baae4;
-					border-color: #1baae4;
-					padding: 0 7px;
-					min-width: 216px;
-				}
-				.OpenDayLanding .btnContact .ant-btn:last-child{
 					background: #31b744;
 					border-color: #31b744;
+					padding: 0 7px;
+					position: absolute;
+					bottom: 25%;
+					left: 33%;
 				}
-				.OpenDayLanding .btnContact .ant-btn span {
-					font-size: 15px;
+				.OpenDayLanding .contact .ant-btn span {
+					font-size: 13px;
 				}
-				.OpenDayLanding .btnContact .ant-btn img {
+				.OpenDayLanding .contact .ant-btn img {
 			    height: 20px;
 			    transform: translateY(-2px);
 			    margin-right: 5px;
@@ -143,17 +144,23 @@ export default function OpenDay() {
 						justify-content: space-around;
 						flex-direction: row;
 					}
-					.btnContact a:first-child {
-					  margin-right: 10px!important;
+					.OpenDayLanding .viewVideo p {
+						font-size: 20px;
+					}
+					.OpenDayLanding .viewVideo p.title {
+						font-size: 30px;
+					}
+					.OpenDayLanding .contact .ant-btn{
+						left: 40%;
+						bottom: 35%;
+					}
+					.OpenDayLanding .contact .ant-btn span {
+						font-size: 18px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
 					.OpenDayContainer {
 				    padding-bottom: 30px!important;
-					}
-					.OpenDayLanding p, .OpenDayLanding span {
-					  font-size: 22px;
-					  line-height: 22px;
 					}
 					.OpenDayLanding .secondParagraph {
 					  font-size: 18px;
@@ -241,10 +248,20 @@ export default function OpenDay() {
 					  width: auto;
 					  height: 32px;
 					}
-					.OpenDayLanding .titleVideo p {
-					  font-size: 22px;
-					  margin: 1vh 20px;
-					  text-align: center;
+					.OpenDayLanding .viewVideo p {
+					  font-size: 19px;
+						text-align: left;
+					}
+					.OpenDayLanding .viewVideo p.title {
+						font-size: 28px;
+						line-height: 30px;
+					}
+					.OpenDayLanding .contact .ant-btn{
+						left: 40%;
+						bottom: 35%;
+					}
+					.OpenDayLanding .contact .ant-btn span {
+						font-size: 18px;
 					}
 				}
 				@media (min-width: ${theme.breakPoints.xl}){
@@ -263,6 +280,19 @@ export default function OpenDay() {
 						height: 20px;
 					  margin-right: 5px;
 					}
+					.OpenDayLanding .viewVideo p {
+					  font-size: 22px;
+					}
+					.OpenDayLanding .viewVideo p.title {
+						font-size: 28px;
+						line-height: 30px;
+					}
+					.OpenDayLanding .contact .ant-btn{
+						left: 40%;
+						bottom: 35%;
+					}
+					.OpenDayLanding .contact .ant-btn span {
+						f
 				}
 			`}</style>
 		</React.Fragment>

@@ -16,7 +16,7 @@ export default function LandingComponent() {
 		<React.Fragment>
 			<NavBar />
 			<Banner />
-			<OpenDayHotSale />
+			<OpenDay />
 			<Properties />
 			<Talks />
 			<Sponsor />
@@ -27,13 +27,14 @@ export default function LandingComponent() {
 					scroll-behavior: smooth;
 				}
 				#openday, #properties, #talks, #sponsor, #bigdata {
-					margin-top: -100px;
+					margin-top: -120px;
+					padding-top: 140px;
 				}
 				.containerLanding{
 					width: 100%;
 					flex: 0 0 100%;
 					max-width: 1400px;
-			    margin: 128px auto 0;
+			    margin: 0 auto;
 			    padding: 0 15px 15px;
 				}
 				.dRowCenter{

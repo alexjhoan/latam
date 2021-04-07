@@ -295,11 +295,13 @@ export default function Banner() {
 				}
 				.ContainerCounter {
 					background: #3A4145;
+					position: relative;
+					z-index: 2;
 				}
 				.CountersLanding {
 					background: #fff;
 					padding: 4vw;
-					margin: -30px 4vw 130px;
+					margin: -30px 4vw 20px;
 					background-color: #fff;
 					border-radius: 20px;
 					box-shadow: 0px 5px 8px #0000009f;
@@ -481,6 +483,9 @@ export default function Banner() {
 					.d-lg-none{
 						display: none
 					}
+					.BannerLanding {
+						margin-bottom: -120px;
+					}
 					.BannerLanding > .containerLanding {
 						width: 90%;
 						margin: 0 auto;
@@ -519,6 +524,7 @@ export default function Banner() {
 				@media (min-width: ${theme.breakPoints.xl}) {
 					.BannerLanding > .containerLanding {
 						width: 80%;
+						padding-bottom: 30px;
 					}
 					.CountersLanding p.titleCounter {
 					  font-size: 17px;
