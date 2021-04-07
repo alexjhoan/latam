@@ -16,9 +16,9 @@ export default function Banner() {
 	const {theme} = useTheme();
 	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
-	const deadline = Date.parse("11/21/2020");
+	const deadline = Date.parse("04/21/2021");
 	const today = Date.now();
-	const init = Date.parse("11/04/2020");
+	const init = Date.parse("04/14/2021");
 
 	const pieData = {
 		labels: [
@@ -98,25 +98,11 @@ export default function Banner() {
 	return (
 		<React.Fragment>
 			<Row className="BannerLanding">
-				<Col xs={24} className="containerLanding">
-					<Row className="InfBanner">
-						<Col xs={24} md={12} className="imgContainer dColumnCenter">
-							<Fade left>
-								<div className="containerAnimation">
-									<Lottie options={LatAmOptions} height={150}/>
-								</div>
-							</Fade>
-						</Col>
-						<Col xs={24} md={12}>
-							<Fade right>
-								<p className="titleDate"><span>Del 4 al 21 de noviembre</span></p>
-								<p className="subTitle">
-									Ofertas exclusivas y oportunidades de inversión en Uruguay y
-									Paraguay por tiempo limitado
-								</p>
-							</Fade>
-						</Col>
-					</Row>
+				<Col xs={24}>
+					<img src="/images/header-movil.png" alt="" className='imgBanner d-md-none'/>
+					<img src="/images/header.png" alt="" className='imgBanner d-none d-md-block'/>
+				</Col>
+				<Col xs={24} className="containerLanding d-none d-lg-block">
 					<Row className="CountersLanding">
 						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
 							<p className="titleCounter">
@@ -187,17 +173,89 @@ export default function Banner() {
 					</Row>
 				</Col>
 			</Row>
+			<Row className='d-lg-none ContainerCounter'>
+				<Col xs={24}>
+					<Row className="CountersLanding">
+						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
+							<p className="titleCounter">
+								Tiempo para comprar con descuentos:
+							</p>
+							<div className="dRowCenter">
+								<div className="img-HourGlass">
+									<Lottie options={defaultOptions}/>
+								</div>
+								<div className="timeCounter">
+									{counter}
+									<div className="textCounter">
+										<span>días</span>
+										<span>horas</span>
+										<span>minutos</span>
+										<span>segundos</span>
+									</div>
+								</div>
+							</div>
+						</Col>
+						<Divider type={"horizontal"} className="lgHidden" />
+						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
+							<p className="titleCounter">¿Qué está pasando en la sala?</p>
+							<div className="visitorCounter">
+								<div className="innerText">
+									<div className="imgInner">
+										<div className="animationContent">
+											<Lottie options={fireOptions} height={25} width={30}/>
+										</div>
+										<p className="titleCounter">
+											<RandomCounter max={632} min={325}/>
+										</p>
+									</div>
+									<span>
+										inversores nos están visitado
+									</span>
+								</div>
+								<div className="innerText">
+									<div className="imgInner">
+										<div className="animationContent">
+											<Lottie options={CommentsOptions} height={25} width={30}/>
+										</div>
+										<p className="titleCounter">
+											<RandomCounter max={215} min={102}/>
+										</p>
+									</div>
+									<span>personas están consultando</span>
+								</div>
+							</div>
+						</Col>
+						<Divider type={"horizontal"} className="lgHidden" />
+						<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
+						<p className="titleCounter">¿De dónde nos visitan?</p>
+							<div className="graficCounter">
+								<div className="imgGrafic">
+									<Pie data={pieData} options={pieOptions}/>
+								</div>
+								<div className="textGrafic dColumnCenter">
+									<div className="sumaryGrafic innerText">
+										<span><span className="colorGraph"></span>Argentina</span>
+										<span><span className="colorGraph"></span>Paraguay</span>
+										<span><span className="colorGraph"></span>Uruguay</span>
+										<span><span className="colorGraph"></span>Otros</span>
+									</div>
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</Col>
+			</Row>	
 			<style jsx global>{`
-				.BannerLanding > .containerLanding {
-				  margin: 60px auto 5vh;
+				.d-none{
+					display: none
 				}
 				.BannerLanding {
-					background-image: url(/images/header.jpg);
-					background-repeat: no-repeat;
-					background-size: cover;
-					background-position: top center;
 					position: relative;
     			z-index: 1;
+					margin-top: 63px;
+				}
+				.BannerLanding .imgBanner {
+					width: 100%;
 				}
 				.BannerLanding .InfBanner {
 					margin: -50px 0 5vh;
@@ -235,11 +293,18 @@ export default function Banner() {
 					font-weight: 900;
 					text-align: center;
 				}
+				.ContainerCounter {
+					background: #3A4145;
+				}
 				.CountersLanding {
 					background: #fff;
 					padding: 4vw;
+					margin: -30px 4vw 130px;
+					background-color: #fff;
 					border-radius: 20px;
 					box-shadow: 0px 5px 8px #0000009f;
+					position: relative;
+					z-index: 2;
 				}
 				.CountersLanding .ant-statistic-content {
 					display: flex;
@@ -301,9 +366,9 @@ export default function Banner() {
 				.CountersLanding .graficCounter .textGrafic{
 					width: 100%;
 				}
-				.CountersLanding .graficCounter .imgGrafic {
-					margin: 0 -20px;
-				}
+				/* .CountersLanding .graficCounter .imgGrafic {
+					margin: 0 -10px;
+				} */
 				.CountersLanding .graficCounter img {
 					width: 100%;
 					max-width: 70px;
@@ -364,8 +429,17 @@ export default function Banner() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}) {
+					.d-md-block{
+						display: block
+					}
+					.d-md-none{
+						display: none
+					}
 					.BannerLanding > .containerLanding {
-					  margin: 120px auto 5vh;
+						margin: 0;
+						position: absolute;
+						bottom: 0;
+						width: 100%;
 					}
 					.BannerLanding .imgContainer,
 					.BannerLanding .imgContainer + .ant-col {
@@ -378,7 +452,8 @@ export default function Banner() {
 						text-align: left;
 					}
 					.BannerLanding .CountersLanding {
-						padding: 20px;
+						padding: 20px 20px 10px;
+						margin: 0;
 					}
 					.BannerLanding .InfBanner span {
 						text-align: left;
@@ -400,6 +475,18 @@ export default function Banner() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}) {
+					.d-lg-block{
+						display: block
+					}
+					.d-lg-none{
+						display: none
+					}
+					.BannerLanding > .containerLanding {
+						width: 90%;
+						margin: 0 auto;
+						left: 0;
+						right: 0;
+					}
 					.CountersLanding .CounterDivider {
 						border-left: solid 1px #0000000f;
 						border-right: solid 1px #0000000f;
@@ -430,6 +517,9 @@ export default function Banner() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.xl}) {
+					.BannerLanding > .containerLanding {
+						width: 80%;
+					}
 					.CountersLanding p.titleCounter {
 					  font-size: 17px;
 					  line-height: 17px;
