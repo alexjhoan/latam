@@ -1,6 +1,6 @@
 import React from "react";
 import {useTheme} from "../shared-components/Styles/ThemeHook";
-import {Row, Col, Typography, Divider, Statistic} from "antd";
+import {Row, Col, Divider, Statistic} from "antd";
 import { Pie } from 'react-chartjs-2';
 import Fade from 'react-reveal/Fade';
 import CountUp from 'react-countup';
@@ -14,7 +14,6 @@ import {RandomCounter} from './RandomCounter'
 export default function Banner() {
 
 	const {theme} = useTheme();
-	const {Title, Text} = Typography;
 	const {Countdown} = Statistic;
 	const deadline = Date.parse("04/21/2021");
 	const today = Date.now();
@@ -103,58 +102,59 @@ export default function Banner() {
 					<img src="/images/header.png" alt="" className='imgBanner d-none d-md-block'/>
 				</Col>
 				<Col xs={24} className="containerLanding d-none d-lg-block">
-					<Row className="CountersLanding">
-						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
-							<p className="titleCounter">
-								Estas ofertas se acaban en
-							</p>
-							<div className="dRowCenter">
-								<div className="img-HourGlass">
-									<Lottie options={defaultOptions}/>
-								</div>
-								<div className="timeCounter">
-									{counter}
-									<div className="textCounter">
-										<span>días</span>
-										<span>horas</span>
-										<span>minutos</span>
-										<span>segundos</span>
+					<Fade bottom>
+						<Row className="CountersLanding">
+							<Col xs={24} lg={8} className="dColumnCenter counterContainer">
+								<p className="titleCounter">
+									Estas ofertas se acaban en
+								</p>
+								<div className="dRowCenter">
+									<div className="img-HourGlass">
+										<Lottie options={defaultOptions}/>
 									</div>
-								</div>
-							</div>
-						</Col>
-						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
-							{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
-							<div className="visitorCounter">
-								<div className="innerText">
-									<div className="imgInner">
-										<div className="animationContent">
-											<Lottie options={fireOptions} height={25} width={30}/>
+									<div className="timeCounter">
+										{counter}
+										<div className="textCounter">
+											<span>días</span>
+											<span>horas</span>
+											<span>minutos</span>
+											<span>segundos</span>
 										</div>
-										<p className="titleCounter">
-											<RandomCounter max={632} min={325}/>
-										</p>
 									</div>
-									<span>
-										inversores nos han visitado en las últimas 6 horas
-									</span>
 								</div>
-								<div className="innerText">
-									<div className="imgInner">
-										<div className="animationContent">
-											<Lottie options={CommentsOptions} height={25} width={30}/>
+							</Col>
+							<Divider type={"horizontal"} className="lgHidden" />
+							<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
+								{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
+								<div className="visitorCounter">
+									<div className="innerText">
+										<div className="imgInner">
+											<div className="animationContent">
+												<Lottie options={fireOptions} height={25} width={30}/>
+											</div>
+											<p className="titleCounter">
+												<RandomCounter max={632} min={325}/>
+											</p>
 										</div>
-										<p className="titleCounter">
-											<RandomCounter max={215} min={102}/>
-										</p>
+										<span>
+											inversores nos han visitado en las últimas 6 horas
+										</span>
 									</div>
-									<span>están consultando ahora</span>
+									<div className="innerText">
+										<div className="imgInner">
+											<div className="animationContent">
+												<Lottie options={CommentsOptions} height={25} width={30}/>
+											</div>
+											<p className="titleCounter">
+												<RandomCounter max={215} min={102}/>
+											</p>
+										</div>
+										<span>están consultando ahora</span>
+									</div>
 								</div>
-							</div>
-						</Col>
-						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
+							</Col>
+							<Divider type={"horizontal"} className="lgHidden" />
+							<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
 						<p className="titleCounter">¿De dónde nos visitan?</p>
 							<div className="graficCounter">
 								<div className="imgGrafic">
@@ -170,80 +170,83 @@ export default function Banner() {
 								</div>
 							</div>
 						</Col>
-					</Row>
+						</Row>
+					</Fade>
 				</Col>
 			</Row>
 			<Row className='d-lg-none ContainerCounter'>
-				<Col xs={24}>
-					<Row className="CountersLanding">
-						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
-							<p className="titleCounter">
-								Estas ofertas se acaban en
-							</p>
-							<div className="dRowCenter">
-								<div className="img-HourGlass">
-									<Lottie options={defaultOptions}/>
-								</div>
-								<div className="timeCounter">
-									{counter}
-									<div className="textCounter">
-										<span>días</span>
-										<span>horas</span>
-										<span>minutos</span>
-										<span>segundos</span>
+				<Fade bottom>
+					<Col xs={24}>
+						<Row className="CountersLanding">
+							<Col xs={24} lg={8} className="dColumnCenter counterContainer">
+								<p className="titleCounter">
+									Estas ofertas se acaban en
+								</p>
+								<div className="dRowCenter">
+									<div className="img-HourGlass">
+										<Lottie options={defaultOptions}/>
 									</div>
-								</div>
-							</div>
-						</Col>
-						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
-							{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
-							<div className="visitorCounter">
-								<div className="innerText">
-									<div className="imgInner">
-										<div className="animationContent">
-											<Lottie options={fireOptions} height={25} width={30}/>
+									<div className="timeCounter">
+										{counter}
+										<div className="textCounter">
+											<span>días</span>
+											<span>horas</span>
+											<span>minutos</span>
+											<span>segundos</span>
 										</div>
-										<p className="titleCounter">
-											<RandomCounter max={632} min={325}/>
-										</p>
 									</div>
-									<span>
-										inversores nos han visitado en las últimas 6 horas
-									</span>
 								</div>
-								<div className="innerText">
-									<div className="imgInner">
-										<div className="animationContent">
-											<Lottie options={CommentsOptions} height={25} width={30}/>
+							</Col>
+							<Divider type={"horizontal"} className="lgHidden" />
+							<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
+								{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
+								<div className="visitorCounter">
+									<div className="innerText">
+										<div className="imgInner">
+											<div className="animationContent">
+												<Lottie options={fireOptions} height={25} width={30}/>
+											</div>
+											<p className="titleCounter">
+												<RandomCounter max={632} min={325}/>
+											</p>
 										</div>
-										<p className="titleCounter">
-											<RandomCounter max={215} min={102}/>
-										</p>
+										<span>
+											inversores nos han visitado en las últimas 6 horas
+										</span>
 									</div>
-									<span>están consultando ahora</span>
-								</div>
-							</div>
-						</Col>
-						<Divider type={"horizontal"} className="lgHidden" />
-						<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
-						<p className="titleCounter">¿De dónde nos visitan?</p>
-							<div className="graficCounter">
-								<div className="imgGrafic">
-									<Pie data={pieData} options={pieOptions}/>
-								</div>
-								<div className="textGrafic dColumnCenter">
-									<div className="sumaryGrafic innerText">
-										<span><span className="colorGraph"></span>Argentina</span>
-										<span><span className="colorGraph"></span>Paraguay</span>
-										<span><span className="colorGraph"></span>Uruguay</span>
-										<span><span className="colorGraph"></span>Otros</span>
+									<div className="innerText">
+										<div className="imgInner">
+											<div className="animationContent">
+												<Lottie options={CommentsOptions} height={25} width={30}/>
+											</div>
+											<p className="titleCounter">
+												<RandomCounter max={215} min={102}/>
+											</p>
+										</div>
+										<span>están consultando ahora</span>
 									</div>
 								</div>
-							</div>
-						</Col>
-					</Row>
-				</Col>
+							</Col>
+							<Divider type={"horizontal"} className="lgHidden" />
+							<Col xs={24} lg={8} className="dColumnCenter metricsContainer">
+							<p className="titleCounter">¿De dónde nos visitan?</p>
+								<div className="graficCounter">
+									<div className="imgGrafic">
+										<Pie data={pieData} options={pieOptions}/>
+									</div>
+									<div className="textGrafic dColumnCenter">
+										<div className="sumaryGrafic innerText">
+											<span><span className="colorGraph"></span>Argentina</span>
+											<span><span className="colorGraph"></span>Paraguay</span>
+											<span><span className="colorGraph"></span>Uruguay</span>
+											<span><span className="colorGraph"></span>Otros</span>
+										</div>
+									</div>
+								</div>
+							</Col>
+						</Row>
+					</Col>
+				</Fade>
 			</Row>	
 			<style jsx global>{`
 				.d-none{

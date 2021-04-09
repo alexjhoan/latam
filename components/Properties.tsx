@@ -1,8 +1,8 @@
 import React from 'react'
-import {SearchResultsCards} from '../shared-components/ViewFragments/SearchResults/Content/SearchResultsCards/web'
 import {Row, Col, Button} from "antd";
 import { useTheme } from "../shared-components/Styles/ThemeHook";
 import { useTranslation } from "react-i18next";
+import Fade from 'react-reveal/Fade';
 import Lottie from 'react-lottie';
 import { useCountUp } from 'react-countup';
 import * as animationBanner from './animations/banner-properties/data.json'
@@ -57,41 +57,48 @@ export default function Properties() {
 				<Col xs={24} className="containerLanding">
 					<Row className='title'>
 						<Col xs={24} md={16} >
-							<p>Más de 1.000 oportunidades para vivir o invertir</p>
+							<Fade top>
+								<p>Más de 1.000 oportunidades para vivir o invertir</p>
+							</Fade>
 						</Col>
 						<Col xs={24} md={8} className='dNone dMdFlex'>
-							<img src="/images/oportunity.png" alt="." className='imgTitle'/>
+							<Fade top>
+								<img src="/images/oportunity.png" alt="." className='imgTitle'/>
+							</Fade>
 						</Col>
 					</Row>
 					{/* <Lottie options={defaultOptions} height="auto"/> */}
 					<div className="containerProps">
-						<div className="itemProps dColumnCenter">
-							<div className="couterPropeties">
-								<a href="https://www.infocasas.com.uy/evento-latam" target="_blank">
-									<img src="/images/uy.png" alt="."/>
-								</a>
-								{/* <div className="textCounter">
-									<span>{countUpUy}</span>
-									<p className="textOfert">{t("ofertas")}</p>
-								</div> */}
-							</div>
-							<div className="detailsItem dColumnCenter">
-								<Button href="https://www.infocasas.com.uy/evento-latam" target="_blank" type="primary" className='toProperties'>{t("Ver propiedades")}</Button>
-								<div className="listDetails">
-									{
-										listUy.map((item, i) => {
-											return (
-												<div className="itemDetail dRowCenter" key={i}>
-													<img src="/images/icons/check.png" alt="."/>
-													<p>{t(item)}</p>
-												</div>
-											)
-										})
-									}
+						<Fade left>
+							<div className="itemProps dColumnCenter">
+								<div className="couterPropeties">
+									<a href="https://www.infocasas.com.uy/evento-latam" target="_blank">
+										<img src="/images/uy.png" alt="."/>
+									</a>
+									{/* <div className="textCounter">
+										<span>{countUpUy}</span>
+										<p className="textOfert">{t("ofertas")}</p>
+									</div> */}
+								</div>
+								<div className="detailsItem dColumnCenter">
+									<Button href="https://www.infocasas.com.uy/evento-latam" target="_blank" type="primary" className='toProperties'>{t("Ver propiedades")}</Button>
+									<div className="listDetails">
+										{
+											listUy.map((item, i) => {
+												return (
+													<div className="itemDetail dRowCenter" key={i}>
+														<img src="/images/icons/check.png" alt="."/>
+														<p>{t(item)}</p>
+													</div>
+												)
+											})
+										}
+									</div>
 								</div>
 							</div>
-						</div>
-						<div className="itemProps dColumnCenter">
+						</Fade>
+						<Fade right>
+							<div className="itemProps dColumnCenter">
 							<div className="couterPropeties">
 								<a href="https://www.infocasas.com.py/evento-latam" target="_blank">
 									<img src="/images/py.png" alt="."/>
@@ -117,6 +124,7 @@ export default function Properties() {
 								</div>
 							</div>
 						</div>
+						</Fade>
 					</div>
 				</Col>
 			</Row>

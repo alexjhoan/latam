@@ -11,26 +11,32 @@ export default function OpenDay() {
 	return (
 		<div className='containerHotSale'>
 			<Row className="containerLanding dMdNone">
-				<Col xs={24} className='dRowCenter'>
-					<img src="/images/hotSale.png" alt="hotSale" className='imgHotSale'/>
-				</Col>
+				<Fade bottom>
+					<Col xs={24} className='dRowCenter'>
+						<img src="/images/hotSale.png" alt="hotSale" className='imgHotSale'/>
+					</Col>
+				</Fade>
 			</Row>
 			<div className='containerDesktop'>
 				<Row className="containerLanding">
 					<Col xs={24} md={12} className='containerImgHot dNone dMdFlex'>
-						<img src="/images/hotSale.png" alt="hotSale" className='imgHotSale'/>
+						<Fade left>
+							<img src="/images/hotSale.png" alt="hotSale" className='imgHotSale'/>
+						</Fade>
 					</Col>
 					<Col xs={24} md={12}>
-						<div className="containerText">
-							<span className='title'>¡Registrate al evento de cierre con ofertas de último momento!</span>
-							<span className='meetDay'>Martes 20 de abril</span>
-							<span className='meetHour'>11hs<img src="/images/icons/zoom.png" alt="zoom" className='imgZoom'/>vía zoom</span>
-							<div className="singUp">
-								<Button type="primary">
-									Registrarme
-								</Button>
+						<Fade right>
+							<div className="containerText">
+								<span className='title'>¡Registrate al evento de cierre con ofertas de último momento!</span>
+								<span className='meetDay'>Martes 20 de abril</span>
+								<span className='meetHour'>11hs<img src="/images/icons/zoom.png" alt="zoom" className='imgZoom'/>vía zoom</span>
+								<div className="singUp">
+									<Button type="primary">
+										Registrarme
+									</Button>
+								</div>
 							</div>
-						</div>
+						</Fade>
 					</Col>
 				</Row>
 			</div>

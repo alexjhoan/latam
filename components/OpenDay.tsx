@@ -10,26 +10,32 @@ export default function OpenDay() {
 		<React.Fragment>
 			<Row id="openday" className="OpenDayLanding">
 				<Col xs={24} className="containerLanding OpenDayContainer">
-					<div className="dColumnCenter title">
-	      		<img src="/images/openDay.png" alt="." />
-					</div>
-					<div className="viewVideo">
-						<div className="titleVideo">
-							<p className='title'>Reviví la apertura en vivo de LatAm Invierte</p>
-							<p>con siete proyectos con ofertas limitadas presentados por sus desarrolladores. </p>
+					<Fade left>
+						<div className="dColumnCenter title">
+							<img src="/images/openDay.png" alt="." />
 						</div>
-						<p>Un lanzamiento imperdible en Asunción, 4 proyectos con descuentos en Montevideo y un proyecto con descuento en Punta del Este.</p>
-						<div className="theVideo">
-							<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
+					</Fade>
+					<Fade right>
+						<div className="viewVideo">
+							<div className="titleVideo">
+								<p className='title'>Reviví la apertura en vivo de LatAm Invierte</p>
+								<p>con siete proyectos con ofertas limitadas presentados por sus desarrolladores. </p>
+							</div>
+							<p>Un lanzamiento imperdible en Asunción, 4 proyectos con descuentos en Montevideo y un proyecto con descuento en Punta del Este.</p>
+							<div className="theVideo">
+								<iframe width="1090" height="613" src="https://www.youtube.com/embed/nsxkaLVzJEY"></iframe>
+							</div>
 						</div>
-					</div>
-					<div className="contact">
-					<img src="/images/flash.png" alt="." />
-						<Button type="primary" href="https://api.whatsapp.com/send?phone=59897134559&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
-							<img src="/images/icons/whatsapp.png" alt="." className='iconWhatsapp'/>
-							Consultá por WhatsApp
-						</Button>
-					</div>
+					</Fade>
+					<Fade left>
+						<div className="contact">
+							<img src="/images/flash.png" alt="." />
+							<Button type="primary" href="https://api.whatsapp.com/send?phone=59897134559&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20proyectos%20en%20lanzamiento" target="_blank">
+								<img src="/images/icons/whatsapp.png" alt="." className='iconWhatsapp'/>
+								Consultá por WhatsApp
+							</Button>
+						</div>
+					</Fade>
 				</Col>
 			</Row>
 			<style jsx global>{`

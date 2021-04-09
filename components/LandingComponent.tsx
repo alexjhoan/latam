@@ -1,20 +1,17 @@
 import React from 'react'
 import { useTheme } from "../shared-components/Styles/ThemeHook";
-import NavBar from "./NavBar"
 import Banner from "./Banner"
 import OpenDay from "./OpenDay"
 import HotSale from "./HotSale"
 import Talks from "./Talks"
 import Properties from "./Properties"
 import Sponsor from "./Sponsor"
-import BigData from "./BigData"
 import Footer from "./Footer"
 
 export default function LandingComponent() {
 	const { theme } = useTheme();
 	return (
 		<React.Fragment>
-			{/* <NavBar /> */}
 			<Banner />
 			<OpenDay />
 			<HotSale />
