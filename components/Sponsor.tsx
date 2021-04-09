@@ -54,11 +54,11 @@ export default function Sponsor() {
 		<React.Fragment>
 			<Row id="sponsor" className="SponsorLanding">
 				<Col xs={24} className="containerLanding">
-					<div className="banner dRowCenter">
+					{/* <div className="banner dRowCenter">
 						<a href="https://www.bbva.com.uy/Inicio/prestamos-hipotecarios?destacadoWI">
 							<img src="/images/bbva_gif.gif" alt="bbva" />
 						</a>
-					</div>
+					</div> */}
 					<h1 className="title">{t("Directorio de Empresas Participantes")}</h1>
 						<div className="participants">
 						 {cardParticipants}
@@ -68,9 +68,9 @@ export default function Sponsor() {
 							<Pagination current={currentPage} total={participants.length} pageSize={totalPerPage} onChange={(page,size)=>setCurrentPage(page)} className="dRowCenter" />
 							: null
 						}
-						<div className="containerLogos">
+						{/* <div className="containerLogos">
 							<img src="/images/logos.jpg" alt="" className="sponsorLogos" />
-						</div>
+						</div> */}
 				</Col>
 			</Row>
 			<style jsx global>{`

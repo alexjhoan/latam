@@ -14,14 +14,13 @@ export default function LandingComponent() {
 	const { theme } = useTheme();
 	return (
 		<React.Fragment>
-			<NavBar />
+			{/* <NavBar /> */}
 			<Banner />
 			<OpenDay />
 			<HotSale />
 			<Properties />
 			{/* <Talks /> */}
 			<Sponsor />
-			<BigData />
 			<Footer />
 			<style jsx global>{`
 				html{

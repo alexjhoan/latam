@@ -106,7 +106,7 @@ export default function Banner() {
 					<Row className="CountersLanding">
 						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
 							<p className="titleCounter">
-								Tiempo para comprar con descuentos:
+								Estas ofertas se acaban en
 							</p>
 							<div className="dRowCenter">
 								<div className="img-HourGlass">
@@ -125,7 +125,7 @@ export default function Banner() {
 						</Col>
 						<Divider type={"horizontal"} className="lgHidden" />
 						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
-							<p className="titleCounter">¿Qué está pasando en la sala?</p>
+							{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
 							<div className="visitorCounter">
 								<div className="innerText">
 									<div className="imgInner">
@@ -137,7 +137,7 @@ export default function Banner() {
 										</p>
 									</div>
 									<span>
-										inversores nos están visitado
+										inversores nos han visitado en las últimas 6 horas
 									</span>
 								</div>
 								<div className="innerText">
@@ -149,7 +149,7 @@ export default function Banner() {
 											<RandomCounter max={215} min={102}/>
 										</p>
 									</div>
-									<span>personas están consultando</span>
+									<span>están consultando ahora</span>
 								</div>
 							</div>
 						</Col>
@@ -178,7 +178,7 @@ export default function Banner() {
 					<Row className="CountersLanding">
 						<Col xs={24} lg={8} className="dColumnCenter counterContainer">
 							<p className="titleCounter">
-								Tiempo para comprar con descuentos:
+								Estas ofertas se acaban en
 							</p>
 							<div className="dRowCenter">
 								<div className="img-HourGlass">
@@ -197,7 +197,7 @@ export default function Banner() {
 						</Col>
 						<Divider type={"horizontal"} className="lgHidden" />
 						<Col xs={24} lg={8} className="CounterDivider dColumnCenter">
-							<p className="titleCounter">¿Qué está pasando en la sala?</p>
+							{/* <p className="titleCounter">¿Qué está pasando en la sala?</p> */}
 							<div className="visitorCounter">
 								<div className="innerText">
 									<div className="imgInner">
@@ -209,7 +209,7 @@ export default function Banner() {
 										</p>
 									</div>
 									<span>
-										inversores nos están visitado
+										inversores nos han visitado en las últimas 6 horas
 									</span>
 								</div>
 								<div className="innerText">
@@ -221,7 +221,7 @@ export default function Banner() {
 											<RandomCounter max={215} min={102}/>
 										</p>
 									</div>
-									<span>personas están consultando</span>
+									<span>están consultando ahora</span>
 								</div>
 							</div>
 						</Col>
@@ -442,6 +442,7 @@ export default function Banner() {
 						position: absolute;
 						bottom: 0;
 						width: 100%;
+						padding: 0 0 15px;
 					}
 					.BannerLanding .imgContainer,
 					.BannerLanding .imgContainer + .ant-col {

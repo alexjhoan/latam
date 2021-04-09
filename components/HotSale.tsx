@@ -37,19 +37,19 @@ export default function OpenDay() {
 			<style jsx>{`
 				.containerHotSale :global(.containerLanding){
 					padding: 0;
-					margin: 0;
+					margin: 0 auto;
 					width: 100%;
 				}
 				.imgHotSale {
 					max-width: 100%;
-					max-height: 300px;
+					max-height: 330px;
 				}
 				.containerText {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-					padding: 13px 15px;
+					padding: 50px 15px;
 					height: 100%;
 				}
 				.containerText :global(>*) {
@@ -68,6 +68,7 @@ export default function OpenDay() {
 					padding: 6px 20px;
 					border-radius: 10px;
 					font-size: 21px;
+					font-weight: 600;
 				}
 				.meetHour{
 					color: #fff;
@@ -118,8 +119,24 @@ export default function OpenDay() {
 						font-size: 24px;
 					}
 				}
-				@media (min-width: ${theme.breakPoints.lg}){
-					
+				@media (min-width: ${theme.breakPoints.xxl}){
+					.title {
+						text-align: left;
+						font-size: 28px;
+					}
+					.meetDay {
+						font-size: 28px;
+					}
+					.meetHour{
+						font-size: 28px;
+					}
+					.imgZoom {
+						width: 30px;
+						margin: 0 5px;
+					}
+					.singUp :global(.ant-btn) {
+						font-size: 28px;
+					}
 				}
 			`}</style>
 		</div>

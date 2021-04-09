@@ -47,12 +47,11 @@ export default function OpenDay() {
 				.OpenDayContainer {
 			    display: grid;
 			    grid-template-columns: 1fr;
-			    padding-bottom: 15px!important;
+			    padding-bottom: 0!important;
 				}
 				.OpenDayLanding .title img{
 					max-width: 50%;
-    			margin-bottom: 3vh;
-					max-height: 170px;
+					max-height: 200px;
 				}
 				.OpenDayLanding .secondParagraph{
 					font-weight: 400;
@@ -80,6 +79,9 @@ export default function OpenDay() {
 					line-height: 1.3;
 					font-size: 16px;
 					font-weight: 900;
+				}
+				.OpenDayLanding .viewVideo {
+					padding-bottom: 30px;
 				}
 				.OpenDayLanding .titleVideo {
 					margin-bottom: 30px;
@@ -113,6 +115,7 @@ export default function OpenDay() {
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
+					align-items: flex-end;
 				}
 				.OpenDayLanding .contact img {
 				  max-width: 100%;
@@ -129,10 +132,10 @@ export default function OpenDay() {
 					padding: 0 7px;
 					position: absolute;
 					bottom: 25%;
-					left: 33%;
+					left: 32%;
 				}
 				.OpenDayLanding .contact .ant-btn span {
-					font-size: 13px;
+					font-size: 12px;
 				}
 				.OpenDayLanding .contact .ant-btn img {
 			    height: 20px;
@@ -159,9 +162,6 @@ export default function OpenDay() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.md}){
-					.OpenDayContainer {
-				    padding-bottom: 30px!important;
-					}
 					.OpenDayLanding .secondParagraph {
 					  font-size: 18px;
 					  line-height: 20px;
@@ -177,10 +177,6 @@ export default function OpenDay() {
 					}
 				}
 				@media (min-width: ${theme.breakPoints.lg}){
-					.OpenDayContainer {
-				    padding-bottom: 60px!important;
-				    padding-top: 20px!important;
-					}
 					.OpenDayLanding .lineLeft{
 						display: block;
 						position: absolute;
@@ -257,8 +253,8 @@ export default function OpenDay() {
 						line-height: 30px;
 					}
 					.OpenDayLanding .contact .ant-btn{
-						left: 40%;
-						bottom: 35%;
+						left: 33%;
+						bottom: 25%;
 					}
 					.OpenDayLanding .contact .ant-btn span {
 						font-size: 18px;
@@ -286,10 +282,6 @@ export default function OpenDay() {
 					.OpenDayLanding .viewVideo p.title {
 						font-size: 28px;
 						line-height: 30px;
-					}
-					.OpenDayLanding .contact .ant-btn{
-						left: 40%;
-						bottom: 35%;
 					}
 					.OpenDayLanding .contact .ant-btn span {
 						f
